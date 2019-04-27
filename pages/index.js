@@ -1,5 +1,8 @@
-function Home() {
-  return <div>Welcome to Next.js!</div>;
-}
+import Meta from '../components/meta';
 
-export default Home;
+export default () => (
+  <div>
+    <Meta />
+    <p>hi there</p>
+  </div>
+)
