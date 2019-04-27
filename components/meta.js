@@ -20,6 +20,11 @@ export default () => (
         color: #000;
         text-decoration: none;
       }
+      p { margin-bottom: 18px; }
+
+      @media screen and (max-width: 1024px) {
+        p { margin-bottom: 28px; }
+      }
     `}</style>
   </>
 )

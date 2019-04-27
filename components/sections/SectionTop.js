@@ -1,3 +1,4 @@
+import Container from '../Container';
 import NavButton from '../NavButton';
 
 export default () => (
@@ -13,14 +14,14 @@ export default () => (
       </div>
       <figcaption>Photo by Stephanie Berger</figcaption>
 
-      <div className="container">
+      <Container>
         <nav id="mainNav">
           <NavButton link="#events" text="Upcoming Events" bgColor="#fb005a" />
           <NavButton link="#projects" text="Projects" bgColor="#e8cf2d" />
           <NavButton link="#stevereichprojects" text="Steve Reich Projects" bgColor="#2dc5ef" />
           <NavButton link="#support" text="Support" bgColor="#7b83df" />
         </nav>
-      </div>
+      </Container>
     </header>
     <style jsx>{`
       #wrapper { position: relative; }
@@ -50,11 +51,6 @@ export default () => (
         font-size: 12px;
         text-align: right;
         margin: 5px 5px 0 0;
-      }
-
-      .container {
-        width: 100%; max-width: 1000px;
-        margin: 0 auto;
       }
 
       #mainNav {

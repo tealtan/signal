@@ -1,19 +1,17 @@
 import Meta from '../components/meta';
 import SectionTop from '../components/sections/SectionTop';
+import SectionEvents from '../components/sections/SectionEvents';
 
 export default () => (
   <>
     <Meta />
 
-    <SectionTop/>
+    <SectionTop />
+    <SectionEvents />
 
     <p>Home page paragraph</p>
 
     {/*
-      1. Header
-      2. Load something from Contentful
-      3. Events section
-
       Sections:
       ---------
       Header
