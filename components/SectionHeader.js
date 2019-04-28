@@ -1,9 +1,8 @@
-export default (props) => (
+export default props => (
   <>
     <h2>{props.text}</h2>
 
     <style jsx>{`
-
       h2 {
         font-size: 54px;
         line-height: 54px;
@@ -19,7 +18,6 @@ export default (props) => (
           margin: 0 0 125px 0;
         }
       }
-
     `}</style>
   </>
-)
+);

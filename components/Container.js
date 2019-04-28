@@ -1,8 +1,6 @@
-export default (props) => (
+export default props => (
   <>
-    <div className="container">
-      {props.children}
-    </div>
+    <div className="container">{props.children}</div>
 
     <style jsx>{`
       .container {
@@ -12,4 +10,4 @@ export default (props) => (
       }
     `}</style>
   </>
-)
+);

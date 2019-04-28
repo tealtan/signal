@@ -18,21 +18,42 @@ export default () => (
         <nav id="mainNav">
           <NavButton link="#events" text="Upcoming Events" bgColor="#fb005a" />
           <NavButton link="#projects" text="Projects" bgColor="#e8cf2d" />
-          <NavButton link="#stevereichprojects" text="Steve Reich Projects" bgColor="#2dc5ef" />
+          <NavButton
+            link="#stevereichprojects"
+            text="Steve Reich Projects"
+            bgColor="#2dc5ef"
+          />
           <NavButton link="#support" text="Support" bgColor="#7b83df" />
         </nav>
       </Container>
     </header>
     <style jsx>{`
-      #wrapper { position: relative; }
-      .logo { margin: 0 auto; padding-top: 30px; }
-
-      @media screen and (min-width: 1024px) {
-        .logo { padding-top: 50px; }
-        .logo, #wrapper, .logo img { width: 252px; height: 252px; }
+      #wrapper {
+        position: relative;
+      }
+      .logo {
+        margin: 0 auto;
+        padding-top: 30px;
       }
 
-      #mark, .circles { position: absolute; top: 0; left: 0; }
+      @media screen and (min-width: 1024px) {
+        .logo {
+          padding-top: 50px;
+        }
+        .logo,
+        #wrapper,
+        .logo img {
+          width: 252px;
+          height: 252px;
+        }
+      }
+
+      #mark,
+      .circles {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
 
       @media screen and (-webkit-min-device-pixel-ratio: 2) {
         .coverImage {
@@ -42,8 +63,11 @@ export default () => (
 
       .coverImage {
         background-image: url('https://images.contentful.com/iyieuwr67lde/5w2hd0sLeMwYYm0cqm6aiu/d9512300a8c15e771f1dac9b7ebcd7dc/header_image_1500.jpg');
-        background-size: cover; background-position: center top;
-        width: 100%; height: 100vh; max-height: 850px;
+        background-size: cover;
+        background-position: center top;
+        width: 100%;
+        height: 100vh;
+        max-height: 850px;
       }
 
       figcaption {
@@ -68,7 +92,6 @@ export default () => (
           width: 100%;
         }
       }
-
     `}</style>
   </>
-)
+);

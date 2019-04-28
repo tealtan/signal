@@ -1,11 +1,24 @@
-import Markdown from "react-markdown"
+import Markdown from 'react-markdown';
 
 function formatDate(date) {
-  const monthNames = ["Jan.", "Feb.", "Mar.", "Apr.", "May", "June", "July", "Aug.", "Sep.", "Oct.", "Nov.", "Dec."];
-  const month = monthNames[Number(date.substr(5,2))-1];
-  const day = Number(date.substr(8,2));
-  const year = date.substr(0,4);
-  return month + " " + day + ", " + year;
+  const monthNames = [
+    'Jan.',
+    'Feb.',
+    'Mar.',
+    'Apr.',
+    'May',
+    'June',
+    'July',
+    'Aug.',
+    'Sep.',
+    'Oct.',
+    'Nov.',
+    'Dec.'
+  ];
+  const month = monthNames[Number(date.substr(5, 2)) - 1];
+  const day = Number(date.substr(8, 2));
+  const year = date.substr(0, 4);
+  return month + ' ' + day + ', ' + year;
 }
 
 function fixNewLines(string) {
@@ -13,39 +26,47 @@ function fixNewLines(string) {
 }
 
 class Event extends React.Component {
-
   state = {
     events: [],
     drawerHidden: true
-  }
+  };
 
   toggleDrawer() {
     this.setState({
       drawerHidden: !this.state.drawerHidden
-    })
+    });
     console.log(this.state.drawerHidden);
   }
 
   render() {
     return (
       <>
-        <div ref="drawer" className="event drawer" onClick={this.toggleDrawer.bind(this)}>
+        <div
+          ref="drawer"
+          className="event drawer"
+          onClick={this.toggleDrawer.bind(this)}
+        >
           <div className="eventHead">
             <span className="eventDate">{formatDate(this.props.date)}</span>
             <div className="eventHeadline">
               <span className="eventName">{this.props.name}</span>
               <span className="eventLocation">{this.props.location}</span>
             </div>
-            <div className="drawerToggle"></div>
+            <div className="drawerToggle" />
           </div>
-          {!this.state.drawerHidden &&
+          {!this.state.drawerHidden && (
             <div className="eventDetails drawerContents">
-              <Markdown escapeHtml={false} source={fixNewLines(this.props.description) || ''} />
-              {this.props.url &&
-                <p><a href="' + {this.props.url} + '">Learn More</a></p>
-              }
+              <Markdown
+                escapeHtml={false}
+                source={fixNewLines(this.props.description) || ''}
+              />
+              {this.props.url && (
+                <p>
+                  <a href="' + {this.props.url} + '">Learn More</a>
+                </p>
+              )}
             </div>
-          }
+          )}
         </div>
 
         <style jsx>{`
@@ -93,7 +114,7 @@ class Event extends React.Component {
 
           .eventDetails a {
             display: block;
-            color: #FF0058;
+            color: #ff0058;
           }
 
           .event .drawerToggle {
@@ -176,8 +197,8 @@ class Event extends React.Component {
           }
         `}</style>
       </>
-    )
+    );
   }
 }
 
-export default Event
+export default Event;

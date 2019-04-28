@@ -1,9 +1,8 @@
-export default (props) => (
+export default props => (
   <>
     <a href={props.link}>{props.text}</a>
 
     <style jsx>{`
-
       a {
         display: block;
         padding: 14px 15px;
@@ -24,8 +23,10 @@ export default (props) => (
         }
       }
 
-      a, a:visited { text-decoration: none; }
-
+      a,
+      a:visited {
+        text-decoration: none;
+      }
     `}</style>
   </>
-)
+);
