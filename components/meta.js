@@ -24,12 +24,12 @@ export default () => (
         color: #000;
         text-decoration: none;
       }
-      p {
+      .event .eventDetails p {
         margin-bottom: 18px;
       }
 
       @media screen and (max-width: 1024px) {
-        p {
+        .event .eventDetails p {
           margin-bottom: 28px;
         }
       }
