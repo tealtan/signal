@@ -1,6 +1,6 @@
-import Meta from '../components/meta';
-import SectionTop from '../components/sections/SectionTop';
-import SectionEvents from '../components/sections/SectionEvents';
+import Meta from '../components/meta'
+import SectionTop from '../components/sections/SectionTop'
+import SectionEvents from '../components/sections/SectionEvents'
 
 export default () => (
   <>
@@ -23,4 +23,4 @@ export default () => (
       Gallery
     */}
   </>
-);
+)

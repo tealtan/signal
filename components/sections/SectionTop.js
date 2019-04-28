@@ -1,5 +1,5 @@
-import Container from '../Container';
-import NavButton from '../NavButton';
+import Container from '../Container'
+import NavButton from '../NavButton'
 
 export default () => (
   <>
@@ -94,4 +94,4 @@ export default () => (
       }
     `}</style>
   </>
-);
+)

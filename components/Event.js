@@ -1,4 +1,4 @@
-import Markdown from 'react-markdown';
+import Markdown from 'react-markdown'
 
 function formatDate(date) {
   const monthNames = [
@@ -14,28 +14,28 @@ function formatDate(date) {
     'Oct.',
     'Nov.',
     'Dec.'
-  ];
-  const month = monthNames[Number(date.substr(5, 2)) - 1];
-  const day = Number(date.substr(8, 2));
-  const year = date.substr(0, 4);
-  return month + ' ' + day + ', ' + year;
+  ]
+  const month = monthNames[Number(date.substr(5, 2)) - 1]
+  const day = Number(date.substr(8, 2))
+  const year = date.substr(0, 4)
+  return month + ' ' + day + ', ' + year
 }
 
 function fixNewLines(string) {
-  return string.replace(/(^|[^\n])\n(?!\n)/g, '$1<br />');
+  return string.replace(/(^|[^\n])\n(?!\n)/g, '$1<br />')
 }
 
 class Event extends React.Component {
   state = {
     events: [],
     drawerHidden: true
-  };
+  }
 
   toggleDrawer() {
     this.setState({
       drawerHidden: !this.state.drawerHidden
-    });
-    console.log(this.state.drawerHidden);
+    })
+    console.log(this.state.drawerHidden)
   }
 
   render() {
@@ -197,8 +197,8 @@ class Event extends React.Component {
           }
         `}</style>
       </>
-    );
+    )
   }
 }
 
-export default Event;
+export default Event

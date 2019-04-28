@@ -1,4 +1,4 @@
-export default props => (
+export default (props) => (
   <>
     <h2>{props.text}</h2>
 
@@ -20,4 +20,4 @@ export default props => (
       }
     `}</style>
   </>
-);
+)

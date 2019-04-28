@@ -1,4 +1,4 @@
-export default props => (
+export default (props) => (
   <>
     <a href={props.link}>{props.text}</a>
 
@@ -29,4 +29,4 @@ export default props => (
       }
     `}</style>
   </>
-);
+)

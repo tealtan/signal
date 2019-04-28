@@ -1,4 +1,4 @@
-export default props => (
+export default (props) => (
   <>
     <div className="container">{props.children}</div>
 
@@ -10,4 +10,4 @@ export default props => (
       }
     `}</style>
   </>
-);
+)
