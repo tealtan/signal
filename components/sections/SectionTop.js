@@ -7,7 +7,7 @@ export default () => (
       <div className="coverImage">
         <div className="logo">
           <div id="wrapper">
-            <img id="mark" src="/static/images/mark.svg" />
+            <img className="mark" src="/static/images/mark.svg" />
             <img className="circles" src="/static/images/circles.svg" />
           </div>
         </div>
@@ -48,7 +48,7 @@ export default () => (
         }
       }
 
-      #mark,
+      .mark,
       .circles {
         position: absolute;
         top: 0;

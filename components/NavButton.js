@@ -6,7 +6,7 @@ export default (props) => (
       a {
         display: block;
         padding: 14px 15px;
-        margin: 5px 15px;
+        margin: 5px 0px;
         font-size: 18px;
         line-height: 22px;
         font-weight: 700;

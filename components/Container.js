@@ -5,8 +5,10 @@ export default (props) => (
     <style jsx>{`
       .container {
         width: 100%;
-        max-width: 1000px;
+        max-width: 1030px;
         margin: 0 auto;
+        padding: 30px 15px;
+        padding: 0px 15px;
       }
     `}</style>
   </>

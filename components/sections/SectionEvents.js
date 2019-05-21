@@ -13,10 +13,19 @@ class SectionEvents extends React.Component {
   })
 
   componentDidMount() {
-    this.fetchEvents(2019).then(this.setEvents)
+    this.fetchEventsFromCurrentSeason().then(this.setEvents)
   }
 
-  fetchEvents = (year) =>
+  fetchEventsFromCurrentSeason() {
+    var currentYear = new Date().getFullYear()
+    return this.client.getEntries({
+      content_type: 'events',
+      'fields.date[gte]': currentYear - 1 + '-01-01T00:00:00Z',
+      order: 'fields.date'
+    })
+  }
+
+  fetchEventsFromYear = (year) =>
     this.client.getEntries({
       content_type: 'events',
       'fields.date[lte]': year + 1 + '-01-01T00:00:00Z',
@@ -35,14 +44,11 @@ class SectionEvents extends React.Component {
         <Container>
           <SectionHeader text="Events" color="#ff0058" />
           <div>
-            {/* TODO
-              - Override date if there's a custom date text
-              - Add ability to load additional years
-            */}
             {this.state.events.map((event) => (
               <Event
                 key={event.fields.slug}
                 date={event.fields.date}
+                dateString={event.fields.multipleDates}
                 name={event.fields.name}
                 location={event.fields.location}
                 description={event.fields.description}

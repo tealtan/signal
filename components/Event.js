@@ -47,7 +47,9 @@ class Event extends React.Component {
           onClick={this.toggleDrawer.bind(this)}
         >
           <div className="eventHead">
-            <span className="eventDate">{formatDate(this.props.date)}</span>
+            <span className="eventDate">
+              {this.props.dateString || formatDate(this.props.date)}
+            </span>
             <div className="eventHeadline">
               <span className="eventName">{this.props.name}</span>
               <span className="eventLocation">{this.props.location}</span>
