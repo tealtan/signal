@@ -23,7 +23,7 @@
     "helmet": "^2.2.0",
     "jade": "~1.11.0",
     "marked": ">=0.3.9",
-    "morgan": "~1.7.0",
+    "morgan": "~1.9.1",
     "nodemon": "^1.11.0",
     "serve-favicon": "~2.3.0"
   }
