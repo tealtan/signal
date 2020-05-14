@@ -1,10 +1,10 @@
 {
   "dependencies": {
-    "contentful": "^7.5.0",
-    "next": "^8.1.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-markdown": "^4.0.8"
+    "contentful": "^7.14.4",
+    "next": "^9.4.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-markdown": "^4.3.1"
   },
   "scripts": {
     "dev": "next",
