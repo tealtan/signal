@@ -34,7 +34,7 @@ var previousYear = currentYear - 1;
 // })
 // .then(function(entries) {
 //   $('.eventsContainer #eventSpan-'+previousYear).html(renderEvents(entries.items));
-//   loadEventsInYear(2018);
+//   loadEventsInYear(currentYear);
 // })
 
 var monthName = new Array()
@@ -56,7 +56,7 @@ function formatEventDate(fields) {
     return fields.multipleDates
   else
     var [year, month, day] = fields.date.split('-')
-    return monthName[Number(month)] + ' ' + day + ', ' + year
+    return monthName[Number(month)] + ' ' + parseInt(day, 10) + ', ' + year
 }
 
 function formatEventURL(url) {
@@ -98,6 +98,9 @@ function showBio(name) {
 }
 
 $(function() {
+
+  loadEventsInYear(currentYear);
+  loadEventsInYear(previousYear);
 
   $('.pastEvents').on('click', function() {
     event.preventDefault();
