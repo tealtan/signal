@@ -54,7 +54,7 @@ class Event extends React.Component {
               <span className="eventName">{this.props.name}</span>
               <span className="eventLocation">{this.props.location}</span>
             </div>
-            <div className="drawerToggle" />
+            <div className={`drawerToggle ${this.state.drawerHidden ? "drawerClosed" : ""}`} />
           </div>
           {!this.state.drawerHidden && (
             <div className="eventDetails drawerContents">
@@ -184,6 +184,10 @@ class Event extends React.Component {
             background-size: 100%;
             transform: rotate(45deg);
             transition: transform 0.1s ease-out;
+          }
+
+          .drawerToggle.drawerClosed {
+            transform: rotate(0);
           }
 
           @media screen and (min-width: 1024px) {
