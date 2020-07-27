@@ -35,6 +35,18 @@ export default () => (
         margin: 0 auto;
       }
 
+      h2 {
+        max-width: 750px;
+        margin: 0 0 30px 0;
+        font-size: 28px;
+        line-height: 40px;
+      }
+
+      h3 {
+        margin-top: 28px;
+        margin-bottom: 3px;
+      }
+
       p {
         color: #333;
         font-size: 16px;
@@ -57,6 +69,12 @@ export default () => (
         p {
           margin-bottom: 28px;
         }
+      }
+
+      a,
+      a:visited {
+        color: #000;
+        text-decoration: none;
       }
     `}</style>
   </>

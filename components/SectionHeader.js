@@ -4,6 +4,7 @@ export default (props) => (
 
     <style jsx>{`
       h2 {
+        max-width: none;
         font-size: 54px;
         line-height: 54px;
         margin: 0 0 30px 0;
