@@ -26,25 +26,37 @@ export default () => (
 
     <Footer />
 
-    {/*
-      Sections:
-      ---------
-      Header
-      About
-      Projects
-      Events
-      People
-      Listen
-      Gallery
-    */}
-
-    <style jsx>{`
+    <style jsx global>{`
       hr {
         height: 0;
         border-top: 1px solid #e2e2e2;
         width: 100%;
         max-width: 1000px;
         margin: 0 auto;
+      }
+
+      p {
+        color: #333;
+        font-size: 16px;
+        line-height: 24px;
+        max-width: 660px;
+      }
+
+      p {
+        margin-bottom: 18px;
+      }
+
+      @media screen and (min-width: 1024px) {
+        p {
+          color: #333;
+          font-size: 18px;
+          line-height: 28px;
+          max-width: 660px;
+        }
+
+        p {
+          margin-bottom: 28px;
+        }
       }
     `}</style>
   </>
