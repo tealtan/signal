@@ -1,5 +1,6 @@
 import * as contentful from 'contentful'
 import Container from '../Container'
+import Section from './Section'
 import SectionHeader from '../SectionHeader'
 import Event from '../Event'
 
@@ -42,20 +43,22 @@ class SectionEvents extends React.Component {
     return (
       <>
         <Container>
-          <SectionHeader text="Events" color="#ff0058" />
-          <div>
-            {this.state.events.map((event) => (
-              <Event
-                key={event.fields.slug}
-                date={event.fields.date}
-                dateString={event.fields.multipleDates}
-                name={event.fields.name}
-                location={event.fields.location}
-                description={event.fields.description}
-                url={event.fields.url}
-              />
-            ))}
-          </div>
+          <Section>
+            <SectionHeader text="Events" color="#ff0058" />
+            <div>
+              {this.state.events.map((event) => (
+                <Event
+                  key={event.fields.slug}
+                  date={event.fields.date}
+                  dateString={event.fields.multipleDates}
+                  name={event.fields.name}
+                  location={event.fields.location}
+                  description={event.fields.description}
+                  url={event.fields.url}
+                />
+              ))}
+            </div>
+          </Section>
         </Container>
         <style jsx>{``}</style>
       </>

@@ -1,10 +1,13 @@
 import Container from '../Container'
+import Section from './Section'
 import SectionHeader from '../SectionHeader'
 
 export default () => (
   <>
     <Container>
-      <SectionHeader text="Listen" color="#5ae798" />
+      <Section>
+        <SectionHeader text="Listen" color="#5ae798" />
+      </Section>
     </Container>
     <style jsx>{``}</style>
   </>
