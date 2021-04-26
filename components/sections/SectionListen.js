@@ -145,43 +145,43 @@ export default () => (
           <iframe
             width="475"
             height="273"
-            frameborder="0"
-            allowfullscreen=""
+            frameBorder="0"
+            allowFullScreen=""
             src="https://www.youtube.com/embed/BXVjf_FSqpc?rel=0"
           ></iframe>
           <iframe
             width="475"
             height="273"
-            frameborder="0"
-            allowfullscreen=""
+            frameBorder="0"
+            allowFullScreen=""
             src="https://www.youtube.com/embed/jd99SAKuun8?rel=0"
           ></iframe>
           <iframe
             width="475"
             height="273"
-            frameborder="0"
-            allowfullscreen=""
+            frameBorder="0"
+            allowFullScreen=""
             src="https://www.youtube.com/embed/m3lqmwHY180?rel=0"
           ></iframe>
           <iframe
             width="475"
             height="273"
-            frameborder="0"
-            allowfullscreen=""
+            frameBorder="0"
+            allowFullScreen=""
             src="https://www.youtube.com/embed/6Zbobkioa8E?rel=0"
           ></iframe>
           <iframe
             width="475"
             height="273"
-            frameborder="0"
-            allowfullscreen=""
+            frameBorder="0"
+            allowFullScreen=""
             src="https://player.vimeo.com/video/63062677?color=ffffff&amp;byline=0&amp;portrait=0"
           ></iframe>
           <iframe
             width="475"
             height="273"
-            frameborder="0"
-            allowfullscreen=""
+            frameBorder="0"
+            allowFullScreen=""
             src="https://www.youtube.com/embed/I5gU-XLkXtE?rel=0"
           ></iframe>
         </div>
