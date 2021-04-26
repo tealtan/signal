@@ -50,16 +50,16 @@ export default () => (
               method="post"
               target="_top"
             >
-              <input type="hidden" name="cmd" value="_s-xclick" />
+              <input type="hidden" name="cmd" defaultValue="_s-xclick" />
               <input
                 type="hidden"
                 name="hosted_button_id"
-                value="L4U6SJE5UAXJ2"
+                defaultValue="L4U6SJE5UAXJ2"
               />
               <input
                 type="submit"
                 name="Donate"
-                value="Donate"
+                defaultValue="Donate"
                 className="donateButton"
               />
               <img
@@ -119,7 +119,7 @@ export default () => (
                   <input
                     type="email"
                     placeholder="Enter your email"
-                    value=""
+                    defaultValue=""
                     name="EMAIL"
                     id="mce-email"
                     className="required email"
@@ -140,7 +140,7 @@ export default () => (
                 <div className="clear">
                   <input
                     type="submit"
-                    value="Go"
+                    defaultValue="Go"
                     name="subscribe"
                     id="mc-embedded-subscribe"
                     className="button"
