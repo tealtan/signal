@@ -1,3 +1,5 @@
+import React from 'react'
+
 import * as contentful from 'contentful'
 import Container from '../Container'
 import Section from './Section'
