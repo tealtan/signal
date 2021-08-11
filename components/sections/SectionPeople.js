@@ -26,19 +26,6 @@ export default () => (
                 </p>
               </div>
             </div>
-            <div className="row">
-              <div className="column">
-                <p>
-                  Peter Kalal<em className="break">Development Associate</em>
-                </p>
-              </div>
-              <div className="column">
-                <p>
-                  Erin Lensing
-                  <em className="break">Administrative Associate</em>
-                </p>
-              </div>
-            </div>
           </div>
         </div>
         <div id="peopleArtistRoster">
