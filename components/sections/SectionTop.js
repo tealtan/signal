@@ -151,15 +151,6 @@ header .logo img {
 #c2 { animation: pulse2 4s linear infinite; animation-delay: 0.4s; }
 #c1 { animation: pulse1 4s linear infinite; animation-delay: 0.5s; }
 
-/* Shared */
-
-figcaption {
-  color: #CCCCCC;
-  font-size: 12px;
-  text-align: right;
-  margin: 5px 5px 0 0;
-}
-
     `}</style>
   </>
 )
