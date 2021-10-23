@@ -111,6 +111,36 @@ export default () => (
         max-width: 750px;
       }
 
+      /* Sidebar */
+
+      .flex {
+        display: flex;
+        flex-direction: column;
+      }
+
+      @media screen and (min-width: 1024px) {
+        .flex {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        .sidebar {
+          width: 210px;
+        }
+      }
+
+      .sidebar span {
+        display: block;
+        font-size: 13px;
+        line-height: 20px;
+        color: #666;
+        margin-bottom: 20px;
+      }
+
+      .sidebar a {
+        text-decoration: underline;
+        color: #666;
+      }
+
       /* Social Buttons */
 
       .socialButtons {
@@ -137,6 +167,51 @@ export default () => (
 
       .socialButtons a:hover {
         opacity: 0.8;
+      }
+
+      /* Drawer Utilities */
+
+      .drawer {
+        cursor: pointer;
+      }
+
+      .drawerContents {
+        cursor: default;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        transition: height 0.5s;
+      }
+
+      .drawerClosed .drawerContents {
+        height: 0;
+      }
+
+      .drawerClosed .drawerToggle {
+        transform: rotate(0deg);
+      }
+
+      .drawerToggle {
+        float: right;
+        width: 50px;
+        height: 50px;
+        margin: -15px -15px 0 0;
+        background: url('/images/icon-plus-yellow@2x.png');
+        background-size: 100%;
+        transform: rotate(45deg);
+        transition: transform 0.1s ease-out;
+      }
+
+      @media screen and (min-width: 1024px) {
+        .drawerToggle {
+          width: 50px;
+          height: 50px;
+          margin: -15px -15px 0 0;
+        }
+      }
+
+      .drawerToggle:hover {
+        cursor: pointer;
       }
     `}</style>
   </>

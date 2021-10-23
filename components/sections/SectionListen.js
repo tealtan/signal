@@ -288,36 +288,6 @@ export default () => (
           margin-bottom: 50px;
         }
       }
-
-      /* Sidebar */
-
-      .flex {
-        display: flex;
-        flex-direction: column;
-      }
-
-      @media screen and (min-width: 1024px) {
-        .flex {
-          flex-direction: row;
-          justify-content: space-between;
-        }
-        .sidebar {
-          width: 210px;
-        }
-      }
-
-      .sidebar span {
-        display: block;
-        font-size: 13px;
-        line-height: 20px;
-        color: #666;
-        margin-bottom: 20px;
-      }
-
-      .sidebar a {
-        text-decoration: underline;
-        color: #666;
-      }
     `}</style>
   </>
 )
