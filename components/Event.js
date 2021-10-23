@@ -44,7 +44,7 @@ class Event extends React.Component {
       <>
         <div
           ref="drawer"
-          className="event drawer"
+          className= {`event drawer ${this.state.drawerHidden ? "drawerClosed" : ""}`}
           onClick={this.toggleDrawer.bind(this)}
         >
           <div className="eventHead">
@@ -61,7 +61,7 @@ class Event extends React.Component {
             <div className="eventDetails drawerContents">
               <Markdown
                 escapeHtml={false}
-                source={fixNewLines(this.props.description) || ''}
+                children={fixNewLines(this.props.description) || ''}
               />
               {this.props.url && (
                 <p>
@@ -169,38 +169,6 @@ class Event extends React.Component {
               margin-top: 30px;
               margin-bottom: 30px;
             }
-          }
-
-          /* Drawer Utils */
-          .drawer {
-            cursor: pointer;
-          }
-
-          .drawerToggle {
-            float: right;
-            width: 50px;
-            height: 50px;
-            margin: -15px -15px 0 0;
-            background: url('/images/icon-plus-yellow@2x.png');
-            background-size: 100%;
-            transform: rotate(45deg);
-            transition: transform 0.1s ease-out;
-          }
-
-          .drawerToggle.drawerClosed {
-            transform: rotate(0);
-          }
-
-          @media screen and (min-width: 1024px) {
-            .drawerToggle {
-              width: 50px;
-              height: 50px;
-              margin: -15px -15px 0 0;
-            }
-          }
-
-          .drawerToggle:hover {
-            cursor: pointer;
           }
         `}</style>
       </>
