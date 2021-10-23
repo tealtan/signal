@@ -26,12 +26,15 @@ export default () => (
     <Footer />
 
     <style jsx global>{`
-      h2 {
-        max-width: 750px;
-        margin: 0 0 30px 0;
-        font-size: 28px;
-        line-height: 40px;
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        font-family: 'seravek-web', 'Georgia', sans-serif;
       }
+
+      /* Content */
 
       h3 {
         margin-top: 28px;
@@ -66,6 +69,46 @@ export default () => (
       a:visited {
         color: #000;
         text-decoration: none;
+      }
+
+      figcaption {
+        color: #cccccc;
+        font-size: 12px;
+        text-align: right;
+        margin: 5px 5px 0 0;
+      }
+
+      .bigText,
+      .quoteText p {
+        font-size: 22px;
+        line-height: 28px;
+        font-style: italic;
+        font-weight: 700;
+        max-width: 750px;
+        margin: 0 0 30px 0;
+      }
+
+      @media screen and (min-width: 720px) {
+        .bigText,
+        .quoteText p {
+          font-size: 28px;
+          line-height: 40px;
+        }
+      }
+
+      .quoteSource {
+        margin-left: 15px;
+        text-transform: uppercase;
+        font-size: 13px;
+        line-height: 16px;
+        font-weight: 400;
+        font-style: normal;
+        display: inline-block;
+        color: #999;
+      }
+
+      .quote p {
+        max-width: 750px;
       }
     `}</style>
   </>
