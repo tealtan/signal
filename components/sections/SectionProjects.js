@@ -92,7 +92,7 @@ export default () => (
               <img
                 id="reichImage1"
                 src="https://images.contentful.com/iyieuwr67lde/3txRxJ2wdq2WEywAqMMaWE/02cc7903599cce5eb08d18471a6c3a67/reich_02_750.jpg"
-                srcset="
+                srcSet="
                     https://images.contentful.com/iyieuwr67lde/5JIbSUOAco8Ca0qM8MaOMC/0eb84b662fc5ad87a4d86c24c4248a24/reich_01_375.jpg   375w,
                     https://images.contentful.com/iyieuwr67lde/1NwISGItBaCMQquca8KcAc/9892b8f432339d9c49c18a809cbdc564/reich_01_1000.jpg 1000w,
                     https://images.contentful.com/iyieuwr67lde/6QAG5VHm8wSyQ8yoUUCcGg/7d3ccbd400214d80f371dd8187008aef/reich_01_2000.jpg 2000w
@@ -229,7 +229,7 @@ export default () => (
               <img
                 id="reichImage2"
                 src="https://images.contentful.com/iyieuwr67lde/3txRxJ2wdq2WEywAqMMaWE/02cc7903599cce5eb08d18471a6c3a67/reich_02_750.jpg"
-                srcset="
+                srcSet="
                     https://images.contentful.com/iyieuwr67lde/1goHxx1vyw0c6MEEW2qEQe/c687325b218d9139b099333a8cb16a16/reich_02_375.jpg   375w,
                     https://images.contentful.com/iyieuwr67lde/3txRxJ2wdq2WEywAqMMaWE/02cc7903599cce5eb08d18471a6c3a67/reich_02_750.jpg   750w,
                     https://images.contentful.com/iyieuwr67lde/206ezDKQJ6QcosiC2mCUa4/2dd4ee916fc252601abe3c8149d46b73/reich_02_1500.jpg 1500w
@@ -238,7 +238,7 @@ export default () => (
               <img
                 id="reichImage3"
                 src="https://images.contentful.com/iyieuwr67lde/6ALCVMAcvuE2IMQ64g6wky/07155e5740a5f3c40581660eb98e7e32/reich_03_375.jpg"
-                srcset="
+                srcSet="
                     https://images.contentful.com/iyieuwr67lde/6ALCVMAcvuE2IMQ64g6wky/07155e5740a5f3c40581660eb98e7e32/reich_03_375.jpg 375w,
                     https://images.contentful.com/iyieuwr67lde/obTDlQwjcGeccEe2U2CuK/f29ff3cfb42f07030c5b6810339c6301/reich_03_750.jpg  750w
                   "
@@ -246,7 +246,7 @@ export default () => (
               <img
                 id="reichImage4"
                 src="https://images.contentful.com/iyieuwr67lde/4P2z4SG4IgMU402M4C2Kmg/82dedb5e94685e4ed713e38b3b107924/reich_04_375.jpg"
-                srcset="
+                srcSet="
                     https://images.contentful.com/iyieuwr67lde/4P2z4SG4IgMU402M4C2Kmg/82dedb5e94685e4ed713e38b3b107924/reich_04_375.jpg 375w,
                     https://images.contentful.com/iyieuwr67lde/1ZsJnWKi0YEmuyMAkIOwwg/3d1f563634b15ddef3d5c3c314c18189/reich_04_750.jpg 750w
                   "
