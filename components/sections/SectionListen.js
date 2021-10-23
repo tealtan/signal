@@ -318,34 +318,6 @@ export default () => (
         text-decoration: underline;
         color: #666;
       }
-
-      /* Social Buttons */
-
-      .socialButtons {
-        margin-bottom: 20px;
-      }
-
-      .socialButtons img {
-        max-width: 100%;
-        max-height: 100%;
-      }
-
-      .socialButtons a {
-        display: inline-block;
-        width: 50px;
-        height: 50px;
-        background-color: #000;
-        border-radius: 25px;
-        margin-right: 10px;
-      }
-
-      .socialButtons a {
-        transition: opacity 0.2s;
-      }
-
-      .socialButtons a:hover {
-        opacity: 0.8;
-      }
     `}</style>
   </>
 )
