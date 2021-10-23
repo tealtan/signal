@@ -196,7 +196,7 @@ export default () => (
 
       .sidebar {
         float: right;
-        width: 120px;
+        width: 120px !important;
       }
 
       @media screen and (min-width: 1024px) {
@@ -337,6 +337,14 @@ export default () => (
         background-color: #000;
         border-radius: 25px;
         margin-right: 10px;
+      }
+
+      .socialButtons a {
+        transition: opacity 0.2s;
+      }
+
+      .socialButtons a:hover {
+        opacity: 0.8;
       }
     `}</style>
   </>
