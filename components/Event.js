@@ -1,5 +1,7 @@
 import React from 'react'
 import Markdown from 'react-markdown'
+import rehypeRaw from 'rehype-raw'
+import rehypeSanitize from 'rehype-sanitize'
 
 function formatDate(date) {
   const monthNames = [
@@ -59,10 +61,8 @@ class Event extends React.Component {
           </div>
           {!this.state.drawerHidden && (
             <div className="eventDetails drawerContents">
-              <Markdown
-                escapeHtml={false}
-                children={fixNewLines(this.props.description) || ''}
-              />
+              <Markdown rehypePlugins={[rehypeRaw, rehypeSanitize]} children={fixNewLines(this.props.description) || ''}>
+              </Markdown>
               {this.props.url && (
                 <p>
                   <a href="' + {this.props.url} + '">Learn More</a>
