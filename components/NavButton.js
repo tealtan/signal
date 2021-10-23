@@ -23,13 +23,8 @@ export default (props) => (
         }
       }
 
-      a:visited {
-        color: #fff;
-      }
-
-      a:hover {
-        color: #f3f3f3 !important;
-      }
+      a:visited { color: #fff; }
+      a:hover { color: #f3f3f3; }
     `}</style>
   </>
 )
