@@ -73,9 +73,62 @@ export default () => (
 
       .st { fill: #fff; }
 
+      /* Logo Animation */
+
+      #wrapper {
+        position: relative;
+      }
+      #mark {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .circles {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      @keyframes pulse5 {
+        0% { opacity: 0; }
+        15% { opacity: 1; }
+        50% { opacity: 0.05; }
+        100% { opacity: 0.05; }
+      }
+      @keyframes pulse4 {
+        0% { opacity: 0; }
+        15% { opacity: 0.8; }
+        65% { opacity: 0.05; }
+        100% { opacity: 0.05; }
+      }
+      @keyframes pulse3 {
+        0% { opacity: 0; }
+        15% { opacity: 0.6; }
+        80% { opacity: 0.05; }
+        100% { opacity: 0.05; }
+      }
+      @keyframes pulse2 {
+        0% { opacity: 0; }
+        15% { opacity: 0.4; }
+        95% { opacity: 0.05; }
+        100% { opacity: 0.05; }
+      }
+      @keyframes pulse1 {
+        0% { opacity: 0; }
+        20% { opacity: 0.2; }
+        95% { opacity: 0.05; }
+        100% { opacity: 0.05; }
+      }
+
+      #c5 { animation: pulse5 4s linear infinite; }
+      #c4 { animation: pulse4 4s linear infinite; animation-delay: 0.2s; }
+      #c3 { animation: pulse3 4s linear infinite; animation-delay: 0.3s; }
+      #c2 { animation: pulse2 4s linear infinite; animation-delay: 0.4s; }
+      #c1 { animation: pulse1 4s linear infinite; animation-delay: 0.5s; }
+
       @media screen and (-webkit-min-device-pixel-ratio: 2) {
         .coverImage {
-          background-image: url('https://images.contentful.com/iyieuwr67lde/3mafctyOWcYiGmAygAOGyY/8c966d9484c2b80da624d7d8858ff561/  header_image_3000.jpg');
+          background-image: url('https://images.contentful.com/iyieuwr67lde/3mafctyOWcYiGmAygAOGyY/8c966d9484c2b80da624d7d8858ff561/ header_image_3000.jpg');
         }
       }
 
