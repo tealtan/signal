@@ -150,6 +150,13 @@ export default () => (
       </Section>
     </Container>
     <style jsx>{`
+      /* People */
+
+      h3 {
+        margin-top: 0;
+        margin-bottom: 20px;
+      }
+
       @media screen and (min-width: 1024px) {
         .sidebar {
           float: left;
@@ -209,6 +216,7 @@ export default () => (
       }
 
       /* Sidebar */
+
       .flex {
         display: flex;
         flex-direction: column;
