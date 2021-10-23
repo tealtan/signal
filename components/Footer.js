@@ -10,8 +10,15 @@ export default () => (
 
     <style jsx>{`
       footer {
-        padding: 20px 0;
+        padding: 20px 15px;
       }
+
+      @media screen and (min-width: 1024px) {
+        footer {
+          padding: 20px 0;
+        }
+      }
+
       footer span {
         font-size: 12px;
         color: #999;
