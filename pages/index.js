@@ -23,20 +23,9 @@ export default () => (
     <SectionListen />
     <SectionSupport />
     <SectionGallery />
-
-    <hr />
-
     <Footer />
 
     <style jsx global>{`
-      hr {
-        height: 0;
-        border-top: 1px solid #e2e2e2;
-        width: 100%;
-        max-width: 1000px;
-        margin: 0 auto;
-      }
-
       h2 {
         max-width: 750px;
         margin: 0 0 30px 0;
