@@ -6,7 +6,7 @@ export default () => (
   <>
     <Container>
       <Section>
-        <SectionHeader text="Support & Donate" color="#7d83e6" />
+        <SectionHeader text="Support &amp; Donate" color="#7d83e6" />
         <div className="flex">
           <div>
             <h2>
@@ -79,7 +79,7 @@ export default () => (
         </div>
       </Section>
       <Section>
-        <div className="double">
+        <div id="double">
           <div className="half">
             <h2 className="sectionName">Contact</h2>
             <p>
@@ -154,6 +154,122 @@ export default () => (
     </Container>
 
     <style jsx>{`
+      /* Content */
+
+      section {
+        padding: 30px 15px;
+        border-bottom: 1px solid #e2e2e2;
+      }
+
+      @media screen and (min-width: 1024px) {
+        section {
+          padding: 70px 0;
+        }
+      }
+
+      .sectionName {
+        font-size: 54px;
+        line-height: 54px;
+        margin: 0 0 30px 0;
+        text-transform: uppercase;
+      }
+
+      @media screen and (min-width: 1024px) {
+        .sectionName {
+          font-size: 200px;
+          line-height: 175px;
+          margin: 0 0 125px 0;
+        }
+      }
+
+      #double .sectionName {
+        font-size: 24px;
+      }
+
+      h2:not(.sectionName) {
+        max-width: 750px;
+        margin: 0 0 30px 0;
+        font-size: 28px;
+        line-height: 40px;
+      }
+
+      h3 {
+        margin-top: 28px;
+        margin-bottom: 3px;
+      }
+
+      p {
+        color: #333;
+        font-size: 16px;
+        line-height: 24px;
+        max-width: 660px;
+      }
+
+      p {
+        margin-bottom: 18px;
+      }
+
+      @media screen and (min-width: 1024px) {
+        p {
+          color: #333;
+          font-size: 18px;
+          line-height: 28px;
+          max-width: 660px;
+        }
+
+        p {
+          margin-bottom: 28px;
+        }
+      }
+
+      a,
+      a:visited {
+        color: #000;
+        text-decoration: none;
+      }
+
+      figcaption {
+        color: #cccccc;
+        font-size: 12px;
+        text-align: right;
+        margin: 5px 5px 0 0;
+      }
+
+      .bigText,
+      .quoteText p {
+        font-size: 22px;
+        line-height: 28px;
+        font-style: italic;
+        font-weight: 700;
+        max-width: 750px;
+        margin: 0 0 30px 0;
+      }
+
+      @media screen and (min-width: 720px) {
+        .bigText,
+        .quoteText p {
+          font-size: 28px;
+          line-height: 40px;
+        }
+      }
+
+      .quoteSource {
+        margin-left: 15px;
+        text-transform: uppercase;
+        font-size: 13px;
+        line-height: 16px;
+        font-weight: 400;
+        font-style: normal;
+        display: inline-block;
+        color: #999;
+      }
+
+      .quote p {
+        max-width: 750px;
+      }
+
+      /* Support, Contact, Newsletter */
+
       .flex {
         flex-direction: column-reverse;
       }
@@ -186,13 +302,13 @@ export default () => (
         margin: 0 0 30px 0;
       }
 
-      .double .sectionName {
+      #double .sectionName {
         margin: 0 0 15px 0;
         line-height: 1;
       }
 
       @media screen and (min-width: 1024px) {
-        .double {
+        #double {
           margin: 0;
           display: flex;
         }
@@ -201,38 +317,38 @@ export default () => (
           margin: 0;
         }
 
-        .double .sectionName {
+        #double .sectionName {
           width: 500px;
         }
 
-        .double p {
+        #double p {
           width: 400px;
         }
       }
 
-      .double a {
+      #double a {
         text-decoration: underline;
         color: #000;
       }
 
-      .double .socialButtons {
+      #double .socialButtons {
         margin-top: 20px;
         margin-bottom: 0;
       }
 
-      .double #mc_embed_signup {
+      #double #mc_embed_signup {
         position: relative;
         margin-top: 20px;
       }
 
-      .double #mc_embed_signup input#mce-email {
+      #double #mc_embed_signup input#mce-email {
         border: 1px solid #000;
         padding: 15px;
         font-size: 16px;
         width: calc(100% - 70px);
       }
 
-      .double #mc_embed_signup input#mc-embedded-subscribe {
+      #double #mc_embed_signup input#mc-embedded-subscribe {
         position: absolute;
         left: calc(100% - 60px);
         top: 0px;
@@ -247,11 +363,11 @@ export default () => (
       }
 
       @media screen and (min-width: 720px) {
-        .double #mc_embed_signup input#mce-email {
+        #double #mc_embed_signup input#mce-email {
           width: 300px;
         }
 
-        .double #mc_embed_signup input#mc-embedded-subscribe {
+        #double #mc_embed_signup input#mc-embedded-subscribe {
           left: 310px;
         }
       }
