@@ -14,7 +14,6 @@ export default () => (
               <path d="M240.4 416.7l12.7-104 60.1 72.5 17.5-38.7 7 1.9-29.6 48-47.2-57-9.4 77.4h-11.1v-.1zM376.8 345.1l-9.3 75.7H395l-1.3 10.5h-38.6l10-81.4 11.7-4.8z" fill="#fff"/>
               <path d="M334.6 350.1l-.6-1.8-3.5-.4-2.3-.5-1.3 2.1L273 445h12.5l15.4-27.7 5.7-10.2 21.9-39.8 11.9 40 3 10 8.3 27.7h11.9l-29-94.9z" fill="#fff"/>
             </svg>
-
             <svg className="circles" viewBox="0 0 644 644" version="1.1">
               <g fill="#FFF" fillRule="evenodd">
                 <path id="c1" className="st" d="M322 644C144.2 644 0 499.8 0 322S144.2 0 322 0s322 144.2 322 322-144.2 322-322 322zm0-2c176.7 0 320-143.3 320-320S498.7 2 322 2 2 145.3 2 322s143.3 320 320 320z"/>
@@ -24,7 +23,6 @@ export default () => (
                 <path id="c5" className="st" d="M322.5 536C204.6 536 109 440.4 109 322.5S204.6 109 322.5 109 536 204.6 536 322.5 440.4 536 322.5 536zm0-1.3c117.2 0 212.2-95 212.2-212.2 0-117.2-95-212.2-212.2-212.2-117.2 0-212.2 95-212.2 212.2 0 117.2 95 212.2 212.2 212.2z"/>
               </g>
             </svg>
-
           </div>
         </div>
       </div>
@@ -101,29 +99,6 @@ header .logo img {
     width: 100%;
   }
 }
-
-#mainNav a {
-  display: block;
-  padding: 14px 15px;
-  margin: 5px 15px;
-  font-size: 18px;
-  line-height: 22px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #fff;
-}
-
-@media screen and (min-width: 1024px) {
-  #mainNav a {
-    width: 242px;
-    margin: 0;
-  }
-}
-
-#mainNav a#nav1 { background-color: #FB005A; }
-#mainNav a#nav2 { background-color: #E8CF2D; }
-#mainNav a#nav3 { background-color: #2DC5EF; }
-#mainNav a#nav4 { background-color: #7B83DF; }
 
 /* Logo Animation */
 
