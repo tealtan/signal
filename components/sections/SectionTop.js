@@ -44,125 +44,147 @@ export default () => (
       </Container>
     </header>
     <style jsx>{`
-      #wrapper {
-        position: relative;
-      }
-      .logo {
-        margin: 0 auto;
-        padding-top: 30px;
-      }
 
-      @media screen and (min-width: 1024px) {
-        .logo {
-          padding-top: 50px;
-        }
-        .logo,
-        #wrapper,
-        .logo img {
-          width: 252px;
-          height: 252px;
-        }
-      }
+/* Header */
 
-      .mark,
-      .circles {
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
+.coverImage {
+  background-image: url('https://images.contentful.com/iyieuwr67lde/5w2hd0sLeMwYYm0cqm6aiu/d9512300a8c15e771f1dac9b7ebcd7dc/header_image_1500.jpg');
+  background-size: cover;
+  background-position: center top;
+  width: 100%;
+  height: 100vh;
+  max-height: 850px;
+}
 
-      .st { fill: #fff; }
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+@media screen and (min-device-pixel-ratio: 2) {
+  .coverImage { background-image: url('https://images.contentful.com/iyieuwr67lde/3mafctyOWcYiGmAygAOGyY/8c966d9484c2b80da624d7d8858ff561/header_image_3000.jpg'); }
+}
 
-      /* Logo Animation */
+header .logo {
+  margin: 0 auto;
+  padding-top: 30px;
+}
 
-      #wrapper {
-        position: relative;
-      }
-      #mark {
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
-      .circles {
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
+header .logo,
+header #wrapper,
+header .logo img {
+  width: 150px;
+  height: 150px;
+}
 
-      @keyframes pulse5 {
-        0% { opacity: 0; }
-        15% { opacity: 1; }
-        50% { opacity: 0.05; }
-        100% { opacity: 0.05; }
-      }
-      @keyframes pulse4 {
-        0% { opacity: 0; }
-        15% { opacity: 0.8; }
-        65% { opacity: 0.05; }
-        100% { opacity: 0.05; }
-      }
-      @keyframes pulse3 {
-        0% { opacity: 0; }
-        15% { opacity: 0.6; }
-        80% { opacity: 0.05; }
-        100% { opacity: 0.05; }
-      }
-      @keyframes pulse2 {
-        0% { opacity: 0; }
-        15% { opacity: 0.4; }
-        95% { opacity: 0.05; }
-        100% { opacity: 0.05; }
-      }
-      @keyframes pulse1 {
-        0% { opacity: 0; }
-        20% { opacity: 0.2; }
-        95% { opacity: 0.05; }
-        100% { opacity: 0.05; }
-      }
+@media screen and (min-width: 1024px) {
+  header .logo {
+    padding-top: 50px;
+  }
 
-      #c5 { animation: pulse5 4s linear infinite; }
-      #c4 { animation: pulse4 4s linear infinite; animation-delay: 0.2s; }
-      #c3 { animation: pulse3 4s linear infinite; animation-delay: 0.3s; }
-      #c2 { animation: pulse2 4s linear infinite; animation-delay: 0.4s; }
-      #c1 { animation: pulse1 4s linear infinite; animation-delay: 0.5s; }
+  header .logo,
+  header #wrapper,
+  header .logo img {
+    width: 252px;
+    height: 252px;
+  }
+}
 
-      @media screen and (-webkit-min-device-pixel-ratio: 2) {
-        .coverImage {
-          background-image: url('https://images.contentful.com/iyieuwr67lde/3mafctyOWcYiGmAygAOGyY/8c966d9484c2b80da624d7d8858ff561/ header_image_3000.jpg');
-        }
-      }
+#mainNav {
+  margin-top: -255px;
+  width: 100%;
+}
 
-      .coverImage {
-        background-image: url('https://images.contentful.com/iyieuwr67lde/5w2hd0sLeMwYYm0cqm6aiu/d9512300a8c15e771f1dac9b7ebcd7dc/header_image_1500.jpg');
-        background-size: cover;
-        background-position: center top;
-        width: 100%;
-        height: 100vh;
-        max-height: 850px;
-      }
+@media screen and (min-width: 1024px) {
+  #mainNav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -120px;
+    margin-bottom: 65px;
+    height: 50px;
+    width: 100%;
+  }
+}
 
-      figcaption {
-        color: #ccc;
-        font-size: 12px;
-        text-align: right;
-        margin: 5px 5px 0 0;
-      }
+#mainNav a {
+  display: block;
+  padding: 14px 15px;
+  margin: 5px 15px;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+}
 
-      #mainNav {
-        margin-top: -255px;
-        width: 100%;
-      }
+@media screen and (min-width: 1024px) {
+  #mainNav a {
+    width: 242px;
+    margin: 0;
+  }
+}
 
-      @media screen and (min-width: 1024px) {
-        #mainNav {
-          display: flex;
-          justify-content: space-between;
-          margin-top: -120px;
-          margin-bottom: 65px;
-          height: 50px;
-          width: 100%;
-        }
-      }
+#mainNav a#nav1 { background-color: #FB005A; }
+#mainNav a#nav2 { background-color: #E8CF2D; }
+#mainNav a#nav3 { background-color: #2DC5EF; }
+#mainNav a#nav4 { background-color: #7B83DF; }
+
+/* Logo Animation */
+
+#wrapper {
+  position: relative;
+}
+#mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@keyframes pulse5 {
+  0% { opacity: 0; }
+  15% { opacity: 1; }
+  50% { opacity: 0.05; }
+  100% { opacity: 0.05; }
+}
+@keyframes pulse4 {
+  0% { opacity: 0; }
+  15% { opacity: 0.8; }
+  65% { opacity: 0.05; }
+  100% { opacity: 0.05; }
+}
+@keyframes pulse3 {
+  0% { opacity: 0; }
+  15% { opacity: 0.6; }
+  80% { opacity: 0.05; }
+  100% { opacity: 0.05; }
+}
+@keyframes pulse2 {
+  0% { opacity: 0; }
+  15% { opacity: 0.4; }
+  95% { opacity: 0.05; }
+  100% { opacity: 0.05; }
+}
+@keyframes pulse1 {
+  0% { opacity: 0; }
+  20% { opacity: 0.2; }
+  95% { opacity: 0.05; }
+  100% { opacity: 0.05; }
+}
+#c5 { animation: pulse5 4s linear infinite; }
+#c4 { animation: pulse4 4s linear infinite; animation-delay: 0.2s; }
+#c3 { animation: pulse3 4s linear infinite; animation-delay: 0.3s; }
+#c2 { animation: pulse2 4s linear infinite; animation-delay: 0.4s; }
+#c1 { animation: pulse1 4s linear infinite; animation-delay: 0.5s; }
+
+/* Shared */
+
+figcaption {
+  color: #CCCCCC;
+  font-size: 12px;
+  text-align: right;
+  margin: 5px 5px 0 0;
+}
+
     `}</style>
   </>
 )
