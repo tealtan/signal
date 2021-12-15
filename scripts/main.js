@@ -24,6 +24,7 @@ function loadEventsInYear(year) {
 
 var currentYear = (new Date()).getFullYear();
 var previousYear = currentYear - 1;
+var nextYear = currentYear + 1;
 
 // Load events in the current season
 // contentfulClient.getEntries({
@@ -101,6 +102,7 @@ $(function() {
 
   loadEventsInYear(currentYear);
   loadEventsInYear(previousYear);
+  loadEventsInYear(nextYear);
 
   $('.pastEvents').on('click', function() {
     event.preventDefault();
