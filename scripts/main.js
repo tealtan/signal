@@ -40,7 +40,7 @@ var nextYear = currentYear + 1;
 
 var monthName = new Array()
 monthName[1] = 'Jan.'
-monthName[2] = 'Jan.'
+monthName[2] = 'Feb.'
 monthName[3] = 'Mar.'
 monthName[4] = 'Apr.'
 monthName[5] = 'May'
