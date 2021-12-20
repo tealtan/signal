@@ -359,9 +359,13 @@ figcaption {
 }
 
 /* Events */
-
 #pastEvents {
-  margin: -105px 0 125px 0;
+  margin: 0 0 30px 0;
+}
+@media screen and (min-width: 720px) {
+  #pastEvents {
+    margin: -105px 0 125px 0;
+  }
 }
 
 .event {
