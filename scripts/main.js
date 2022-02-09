@@ -3,6 +3,29 @@ var contentfulClient = contentful.createClient({
   space: 'iyieuwr67lde'
 })
 
+// Load sections
+
+function loadSections() {
+  contentfulClient.getEntries({
+    content_type: 'section'
+  })
+  .then(function(entries) {
+    var sectionAbout               = entries.items.filter(function (section) { return section.sys.id === "2UYfZhGTLqO662Y4qmuIEc"; })[0].fields;
+    var sectionProjects            = entries.items.filter(function (section) { return section.sys.id === "6lRZSPghigQuYUSOKMG4om"; })[0].fields;
+    var sectionPerformanceProjects = entries.items.filter(function (section) { return section.sys.id === "rnulcmXUaGoiIGO8qA8Ck"; })[0].fields;
+    var sectionSteveReichProjects  = entries.items.filter(function (section) { return section.sys.id === "3phH9nJ0PSGiOucyW2UEuG"; })[0].fields;
+    var sectionEducationalProjects = entries.items.filter(function (section) { return section.sys.id === "2cO3qOk0nuyIoOogC40K8c"; })[0].fields;
+    var sectionSupport             = entries.items.filter(function (section) { return section.sys.id === "1vlmywGrxmu6ye2qq2U2UK"; })[0].fields;
+
+    $('#js-about-text').html(marked(sectionAbout.text));
+    $('#js-projects-text').html(marked(sectionProjects.text));
+    $('#js-performance-projects-text').html(marked(sectionPerformanceProjects.text));
+    $('#js-reich-text').html(marked(sectionSteveReichProjects.text));
+    $('#js-educational-text').html(marked(sectionEducationalProjects.text));
+    $('#js-support-text').html(marked(sectionSupport.text.replace(/(^|[^\n])\n(?!\n)/g, "$1<br />")));
+  })
+}
+
 function renderEvents(events) {
   return '<div class="events">' +
     events.map(renderSingleEvent).join('\n') +
@@ -99,6 +122,8 @@ function showBio(name) {
 }
 
 $(function() {
+
+  loadSections();
 
   loadEventsInYear(currentYear);
   loadEventsInYear(previousYear);

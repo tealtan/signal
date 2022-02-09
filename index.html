@@ -130,7 +130,6 @@
     </header>
     <main>
       <div class="container">
-        <!-- Sections--><!-- Events--><!-- People-->
         <section id="about">
           <h1 class="sectionName">Ensemble Signal</h1>
           <div class="flex">
@@ -149,7 +148,7 @@
                 <p>
                   <strong>Ensemble Signal</strong> is a NY-based ensemble dedicated to offering the broadest possible audience access to a diverse range of contemporary works through performance, commissioning, recording, and education. Since its debut in 2008, Signal has performed over 350 concerts, premiered numerous works, and co-produced ten recordings.
                 </p>
-                <div class="drawerContents">
+                <div id="js-about-text" class="drawerContents">
                   <p>
                     Signal was founded by Co-Artistic/Executive Director Lauren Radnofsky and Co-Artistic Director/Conductor Brad Lubman. Described by the New York Times as "one of the most vital groups of its kind” and “A new-music ensemble that by this point practically guarantees quality performances,” Signal regularly performs with Lubman and features a supergroup of independent artists from the modern music scene. Lubman, one of the foremost conductors of modern music and a leading figure in the field for over two decades, is a frequent guest with the world’s most distinguished orchestras and new music ensembles.
                   </p>
@@ -207,16 +206,9 @@
             </div>
           </div>
           <div>
-            <p>
-              Ensemble Signal builds tailor-made projects in collaboration with
-              artists and organizations, bringing a diverse range of
-              contemporary music to the broadest possible audience through
-              performance, commissioning, recording and education. Signal has
-              realized many performance and educational projects that are ideal
-              for replication, and is firmly committed to building new projects
-              that encompass a wide variety of musical styles, scopes, and
-              sizes.
-            </p>
+            <div id="js-projects-text">
+              <p>Ensemble Signal builds tailor-made projects in collaboration with artists and organizations, bringing a diverse range of contemporary music to the broadest possible audience through performance, commissioning, recording and education. Signal has realized many performance and educational projects that are ideal for replication, and is firmly committed to building new projects that encompass a wide variety of musical styles, scopes, and sizes.</p>
+            </div>
             <h3>
               <a href="#pastEvents">View complete past &amp; current Signal projects here.</a>
             </h3>
@@ -227,7 +219,7 @@
               <div class="drawerToggle"></div>
             </div>
             <div class="projectDetails drawerContents">
-              <div>
+              <div id="js-performance-projects-text">
                 <p>
                   Since Ensemble Signal’s inception in 2008, the Ensemble has performed over 350 concerts ranging in size and scope, from solos to mixed contemporary ensemble, multimedia or video opera productions and live ensemble with film. From the beginning, a core focus of the Ensemble has been frequently working in detail with the composers whose works we play, in order to produce the most precise possible interpretations. Signal’s repertoire includes styles ranging from minimalism to the iconoclastic avant-garde, to classical. Ensemble Signal is flexible in size and instrumentation: we build projects consisting of solos to 55 players and more. Signal loves working with people to realize dream projects.
                 </p>
@@ -260,7 +252,7 @@
                 <figcaption>Stephanie Berger</figcaption>
               </figure>
               <div class="flex">
-                <div>
+                <div id="js-reich-text">
                   <h3 id="ensemble-signals-steve-reich-history-and-vision-for-the-future">
                     Ensemble Signal’s Steve Reich History
                   </h3>
@@ -383,13 +375,13 @@
               </div>
             </div>
           </div>
-          <div class="project drawer drawerClosed">
+          <div id="educational" class="project drawer drawerClosed">
             <div class="projectHead">
               <h3>Educational Projects</h3>
               <div class="drawerToggle"></div>
             </div>
             <div class="projectDetails drawerContents">
-              <div>
+              <div id="js-educational-text">
                 <p>Signal’s educational projects can include:</p>
                 <h3 id="community-outreach--family-concerts">
                   Community Outreach &amp; Family Concerts
@@ -418,31 +410,21 @@
         <section id="events">
           <h2 class="sectionName">Events</h2>
           <h3 id="pastEvents" class="placeholder">
-            Past events<a data-year="2019" href="#eventSpan-2019" class="pastEvents"
-              >2019</a
-            ><a data-year="2018" href="#eventSpan-2018" class="pastEvents"
-              >2018</a
-            ><a data-year="2017" href="#eventSpan-2017" class="pastEvents"
-              >2017</a
-            ><a data-year="2016" href="#eventSpan-2016" class="pastEvents"
-              >2016</a
-            ><a data-year="2015" href="#eventSpan-2015" class="pastEvents"
-              >2015</a
-            ><a data-year="2014" href="#eventSpan-2014" class="pastEvents"
-              >2014</a
-            ><a data-year="2013" href="#eventSpan-2013" class="pastEvents"
-              >2013</a
-            ><a data-year="2012" href="#eventSpan-2012" class="pastEvents"
-              >2012</a
-            ><a data-year="2011" href="#eventSpan-2011" class="pastEvents"
-              >2011</a
-            ><a data-year="2010" href="#eventSpan-2010" class="pastEvents"
-              >2010</a
-            ><a data-year="2009" href="#eventSpan-2009" class="pastEvents"
-              >2009</a
-            ><a data-year="2008" href="#eventSpan-2008" class="pastEvents"
-              >2008</a
-            >
+            Past events
+            <a data-year="2021" href="#eventSpan-2021" class="pastEvents">2021</a>
+            <!-- <a data-year="2020" href="#eventSpan-2020" class="pastEvents">2020</a> -->
+            <a data-year="2019" href="#eventSpan-2019" class="pastEvents">2019</a>
+            <a data-year="2018" href="#eventSpan-2018" class="pastEvents">2018</a>
+            <a data-year="2017" href="#eventSpan-2017" class="pastEvents">2017</a>
+            <a data-year="2016" href="#eventSpan-2016" class="pastEvents">2016</a>
+            <a data-year="2015" href="#eventSpan-2015" class="pastEvents">2015</a>
+            <a data-year="2014" href="#eventSpan-2014" class="pastEvents">2014</a>
+            <a data-year="2013" href="#eventSpan-2013" class="pastEvents">2013</a>
+            <a data-year="2012" href="#eventSpan-2012" class="pastEvents">2012</a>
+            <a data-year="2011" href="#eventSpan-2011" class="pastEvents">2011</a>
+            <a data-year="2010" href="#eventSpan-2010" class="pastEvents">2010</a>
+            <a data-year="2009" href="#eventSpan-2009" class="pastEvents">2009</a>
+            <a data-year="2008" href="#eventSpan-2008" class="pastEvents">2008</a>
           </h3>
           <div class="eventsContainer">
             <div id="eventSpan-2008"></div>
@@ -816,7 +798,8 @@
         <section id="support">
           <h2 class="sectionName">Support &amp; Donate</h2>
           <div class="flex">
-            <div>
+            <div id="js-support-text">
+            <!--
               <h2
                 id="ensemble-signal-is-a-501c3-organization-that-relies-on-contributors-like-you-in-order-to-sustain-our-programs-financial-and-in-kind-donations-from-supporters-who-also-believe-in-our-goals-are-essential-thank-you-so-much-for-your-consideration"
               >
@@ -854,6 +837,7 @@
                   >Joan Margot Smith</em
                 >
               </p>
+            -->
             </div>
             <div class="sidebar">
               <form
@@ -1107,7 +1091,7 @@
           </div>
         </aside>
         <footer>
-          <div class="container"><span>2021 Ensemble Signal</span></div>
+          <div class="container"><span>2022 Ensemble Signal</span></div>
         </footer>
       </div>
     </main>
