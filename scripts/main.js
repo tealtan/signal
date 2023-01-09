@@ -126,7 +126,7 @@ $(function() {
   loadSections();
 
   loadEventsInYear(currentYear);
-  // loadEventsInYear(previousYear);
+  loadEventsInYear(previousYear);
   loadEventsInYear(nextYear);
 
   $('.pastEvents').on('click', function() {
