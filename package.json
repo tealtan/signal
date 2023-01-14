@@ -1,0 +1,27 @@
+{
+  "engines": {
+    "node": "16.11.1"
+  },
+  "dependencies": {
+    "@sanity/block-content-to-react": "^3.0.0",
+    "@sanity/client": "^3.4.1",
+    "@sanity/image-url": "^1.0.1",
+    "groq": "^2.33.2",
+    "next": "^12.3.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "scripts": {
+    "dev": "next",
+    "lint": "next lint",
+    "prettier": "prettier --write .",
+    "build": "next build",
+    "start": "next start"
+  },
+  "devDependencies": {
+    "eslint": "^8.27.0",
+    "eslint-config-next": "^13.0.3",
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "^2.7.1"
+  }
+}
