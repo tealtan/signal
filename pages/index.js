@@ -201,7 +201,6 @@ export default function Index(response) {
         h2,
         h3,
         #mainNav li {
-          font-family: 'gtam-compressed';
           text-rendering: optimizeLegibility;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
