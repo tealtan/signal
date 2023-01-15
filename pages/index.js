@@ -2,22 +2,23 @@ import React from 'react'
 
 import Meta from '../components/Meta'
 import SectionTop from '../components/sections/SectionTop'
-// import SectionAbout from '../components/sections/SectionAbout'
+import SectionAbout from '../components/sections/SectionAbout'
 // import SectionEvents from '../components/sections/SectionEvents'
 // import SectionRecordings from '../components/sections/SectionRecordings'
 // import SectionVideos from '../components/sections/SectionVideos'
 // import SectionGallery from '../components/sections/SectionGallery'
 // import Footer from '../components/Footer'
+import Script from 'next/script'
 
 import client from '../sanityClient'
 
 export async function getStaticProps({ params }) {
-  // const sectionsData = await client.getDocuments([
-  //   'sectionAbout',
+  const sectionsData = await client.getDocuments([
+    '8f96e3ca-1f81-47f8-98c5-21a5666a26ca', // sectionAbout
   //   'sectionEvents',
   //   'sectionVideo',
   //   'sectionContact',
-  // ])
+  ]);
 
   // const eventsData = await client.fetch(
   //   '*[_type == "event" && date > "' +
@@ -27,7 +28,7 @@ export async function getStaticProps({ params }) {
 
   const sectionTopData = await client.fetch(
     '*[_type == "sectionTop"]{ ..., "backgroundImage": { "url": backgroundImage.asset->url } }'
-  )
+  );
 
   // const sectionRecordingsData = await client.fetch(
   //   '*[_type == "sectionRecordings"]{ ..., "recordings": recordings[]{ ..., "cover": cover.asset->url } }'
@@ -37,9 +38,16 @@ export async function getStaticProps({ params }) {
   //   '*[_type == "sectionGallery"]{ ..., "images": images[]{ _key, "url": asset->url } }'
   // )
 
+
+  const abData = await client.fetch(
+    '*[_type == "sectionAbout"]'
+  );
+
+  console.log(abData);
+
   return {
     props: {
-      // sectionsData,
+      sectionsData,
       sectionTopData,
       // sectionRecordingsData,
       // sectionGalleryData,
@@ -55,6 +63,9 @@ export default function Index(response) {
       <Meta />
 
       <SectionTop {...response.sectionTopData[0]} />
+      <SectionAbout {...response.sectionsData[0]} />
+
+      <Script src="https://use.typekit.net/yll6srm.js" />
 
       <style jsx global>{`
         @font-face {
