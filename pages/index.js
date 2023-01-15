@@ -1,6 +1,6 @@
 import React from 'react'
 
-// import Meta from '../components/Meta'
+import Meta from '../components/Meta'
 import SectionTop from '../components/sections/SectionTop'
 // import SectionAbout from '../components/sections/SectionAbout'
 // import SectionEvents from '../components/sections/SectionEvents'
@@ -52,56 +52,26 @@ export async function getStaticProps({ params }) {
 export default function Index(response) {
   return (
     <>
+      <Meta />
+
       <SectionTop {...response.sectionTopData[0]} />
 
       <style jsx global>{`
-        @font-face {
-          font-family: 'gtam-standard';
-          font-style: normal;
-          font-weight: 400;
-          src: url('/fonts/GT-America-Standard-Regular.woff2') format('woff2'),
-            url('/fonts/GT-America-Standard-Regular.woff') format('woff');
-          font-display: swap;
-        }
-
-        @font-face {
-          font-family: 'gtam-standard';
-          font-style: italic;
-          font-weight: 400;
-          src: url('/fonts/GT-America-Standard-Regular-Italic.woff2')
-              format('woff2'),
-            url('/fonts/GT-America-Standard-Regular-Italic.woff') format('woff');
-          font-display: swap;
-        }
-
-        @font-face {
-          font-family: 'gtam-standard';
-          font-style: normal;
-          font-weight: 700;
-          src: url('/fonts/GT-America-Standard-Bold.woff2') format('woff2'),
-            url('/fonts/GT-America-Standard-Bold.woff') format('woff');
-          font-display: swap;
-        }
-
-        @font-face {
-          font-family: 'gtam-compressed';
-          src: url('/fonts/GT-America-Compressed-Bold.woff2') format('woff2'),
-            url('/fonts/GT-America-Compressed-Bold.woff') format('woff');
-          font-display: swap;
-        }
-
         *,
         *:before,
         *:after {
           margin: 0;
+          box-sizing: border-box;
           padding: 0;
-          box-sizing: inherit;
+          border: 0;
         }
 
         html {
-          box-sizing: border-box;
-          font-family: 'gtam-standard', 'Helvetica', sans-serif;
           scroll-behavior: smooth;
+        }
+
+        * {
+          font-family: 'seravek-web', 'Georgia', sans-serif;
         }
 
         .container {
