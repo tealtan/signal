@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Container from '../Container'
+import SignalLogo from '../SignalLogo'
 
 class SectionTop extends React.Component {
   // componentDidMount() {
@@ -23,11 +24,13 @@ class SectionTop extends React.Component {
           >
             <Container>
               <div className="logo">
-                <h1>{this.props.title}</h1>
-                <figcaption>{this.props.photoCredit}</figcaption>
+                <SignalLogo />
               </div>
             </Container>
           </div>
+
+          <figcaption>{this.props.photoCredit}</figcaption>
+
           <Container>
             <ul id="mainNav">
               {Object.values(this.props.links).map((navLink) => (
@@ -40,81 +43,93 @@ class SectionTop extends React.Component {
         </header>
         <style jsx>{`
           /* Header */
-
           .coverImage {
-            position: relative;
             background-size: cover;
-            background-position: center center;
+            background-position: center top;
             width: 100%;
-            height: 90vh;
-            max-height: 750px;
-          }
-
-          @media screen and (max-width: 600px) {
-            .coverImage {
-              background-color: #000000;
-              /* background-size: 100%; */
-              background-repeat: no-repeat;
-            }
+            height: 100vh;
+            max-height: 850px;
           }
 
           header .logo {
             margin: 0 auto;
-            /* border-top: 10px solid #fff; */
-            width: 100%;
-            padding-top: 15px;
+            padding-top: 30px;
           }
 
-          header .logo h1 {
-            color: #fff;
-            font-size: 60px;
-            text-transform: uppercase;
-          }
-
-          header .logo figcaption {
-            position: absolute;
-            color: #666;
-            right: 15px;
-            bottom: 15px;
-          }
-
-          @media screen and (max-width: 1024px) {
-            header .logo {
-              width: calc(100% - 40px);
-              margin: 0 auto;
-            }
-            header .logo h1 {
-              font-size: 42px;
-            }
-            #mainNav {
-              display: none;
-            }
+          header .logo,
+          header #wrapper,
+          header .logo img {
+            width: 150px;
+            height: 150px;
           }
 
           @media screen and (min-width: 1024px) {
             header .logo {
-              width: 1000px;
+              padding-top: 50px;
             }
 
+            header .logo,
+            header #wrapper,
+            header .logo img {
+              width: 252px;
+              height: 252px;
+            }
+          }
+
+          figcaption {
+            color: #cccccc;
+            font-size: 12px;
+            text-align: right;
+            margin: 5px 5px 0 0;
+          }
+
+          #mainNav {
+            margin-top: -255px;
+            width: 100%;
+            list-style-type: none;
+          }
+
+          @media screen and (min-width: 1024px) {
             #mainNav {
               display: flex;
-              justify-content: flex-start;
-              margin: 0 auto 45px 0;
-              /* border-top: 5px solid #000; */
-            }
-
-            #mainNav li {
-              list-style: none;
+              justify-content: space-between;
+              margin-top: -120px;
+              margin-bottom: 65px;
+              height: 50px;
+              width: 100%;
             }
           }
 
           #mainNav a {
             display: block;
-            padding: 32px 0;
-            margin: 0 30px 0 0;
-            font-size: 45px;
+            padding: 14px 15px;
+            margin: 5px 15px;
+            font-size: 18px;
             line-height: 22px;
             font-weight: 700;
+            text-transform: uppercase;
+            color: #fff;
+            background-color: #000;
+          }
+
+          @media screen and (min-width: 1024px) {
+            #mainNav a {
+              width: 242px;
+              margin: 0;
+            }
+          }
+
+          #mainNav li:nth-of-type(1) a {
+            background-color: #fb005a;
+          }
+          #mainNav li:nth-of-type(2) a {
+            background-color: #e8cf2d;
+          }
+          #mainNav li:nth-of-type(3) a {
+            background-color: #5ae798;
+          }
+          #mainNav li:nth-of-type(4) a {
+            background-color: #7b83df;
           }
         `}</style>
         <style global jsx>{``}</style>
