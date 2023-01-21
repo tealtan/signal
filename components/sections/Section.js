@@ -16,7 +16,7 @@ export default function Section(propsIn) {
       >{props.children}</section>
 
       <style jsx>{`
-        .section { padding: 0; }
+        .section { padding: 0 20px; }
         .section--padding-large { padding: 30px 20px; }
         .section--padding-small { padding: 20px 20px; }
 
