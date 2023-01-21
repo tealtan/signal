@@ -3,7 +3,7 @@ import React from 'react'
 import Meta from '../components/Meta'
 import SectionTop from '../components/sections/SectionTop'
 import SectionAbout from '../components/sections/SectionAbout'
-// import SectionEvents from '../components/sections/SectionEvents'
+import SectionEvents from '../components/sections/SectionEvents'
 import SectionRecordings from '../components/sections/SectionRecordings'
 import SectionVideos from '../components/sections/SectionVideos'
 import SectionGallery from '../components/sections/SectionGallery'
@@ -15,16 +15,16 @@ import client from '../sanityClient'
 export async function getStaticProps({ params }) {
   const sectionsData = await client.getDocuments([
     '8f96e3ca-1f81-47f8-98c5-21a5666a26ca', // sectionAbout
-  //   'sectionEvents',
+    '53f326f2-297d-40cb-aca4-8a407d218a07', // 'sectionEvents',
     'd3f9076d-5a9c-48bf-93dd-857d9bc95275', // 'sectionVideo',
   //   'sectionContact',
   ]);
 
-  // const eventsData = await client.fetch(
-  //   '*[_type == "event" && date > "' +
-  //     sectionsData[1].startDate +
-  //     '"] | order(date)'
-  // )
+  const eventsData = await client.fetch(
+    '*[_type == "event" && date > "' +
+      sectionsData[1].startDate +
+      '"] | order(date)'
+  )
 
   const sectionTopData = await client.fetch(
     '*[_type == "sectionTop"]{ ..., "backgroundImage": { "url": backgroundImage.asset->url } }'
@@ -38,7 +38,7 @@ export async function getStaticProps({ params }) {
     '*[_type == "sectionGallery"]{ ..., "images": images[]{ _key, "url": asset->url } }'
   )
 
-  console.log(sectionGalleryData);
+  // console.log(sectionsData);
 
   return {
     props: {
@@ -46,7 +46,7 @@ export async function getStaticProps({ params }) {
       sectionTopData,
       sectionRecordingsData,
       sectionGalleryData,
-      // eventsData,
+      eventsData,
     },
     revalidate: 60, // regenerate page every 1 min
   }
@@ -59,14 +59,15 @@ export default function Index(response) {
 
       <SectionTop {...response.sectionTopData[0]} />
       <SectionAbout {...response.sectionsData[0]} />
-
+      <SectionEvents
+        eventsList={response.eventsData}
+        {...response.sectionsData[1]}
+      />
       <SectionRecordings {...response.sectionRecordingsData[0]} />
-      <SectionVideos {...response.sectionsData[1]} />
-
-      <Script src="https://use.typekit.net/yll6srm.js" />
-
+      <SectionVideos {...response.sectionsData[2]} />
       <SectionGallery {...response.sectionGalleryData[0]} />
       <Footer />
+      <Script src="https://use.typekit.net/yll6srm.js" />
 
       <style jsx global>{`
         @font-face {
@@ -403,10 +404,10 @@ export default function Index(response) {
 
       // <SectionTop {...response.sectionTopData[0]} />
       // <SectionAbout {...response.sectionsData[0]} />
-      <SectionEvents
-        eventsList={response.eventsData}
-        {...response.sectionsData[1]}
-      />
+      // <SectionEvents
+      //   eventsList={response.eventsData}
+      //   {...response.sectionsData[1]}
+      // />
       <SectionRecordings {...response.sectionRecordingsData[0]} />
       <SectionVideos {...response.sectionsData[2]} />
       // <SectionGallery {...response.sectionGalleryData[0]} />
