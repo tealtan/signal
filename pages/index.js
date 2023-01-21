@@ -7,7 +7,7 @@ import SectionAbout from '../components/sections/SectionAbout'
 // import SectionRecordings from '../components/sections/SectionRecordings'
 // import SectionVideos from '../components/sections/SectionVideos'
 // import SectionGallery from '../components/sections/SectionGallery'
-// import Footer from '../components/Footer'
+import Footer from '../components/Footer'
 import Script from 'next/script'
 
 import client from '../sanityClient'
@@ -66,6 +66,8 @@ export default function Index(response) {
       <SectionAbout {...response.sectionsData[0]} />
 
       <Script src="https://use.typekit.net/yll6srm.js" />
+
+      <Footer />
 
       <style jsx global>{`
         @font-face {
