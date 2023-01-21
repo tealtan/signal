@@ -14,7 +14,7 @@ class SectionListen extends React.Component {
     return (
       <>
         <Container>
-          <Section>
+          <Section hasBorder>
             <div
               className="sidebar"
               dangerouslySetInnerHTML={{ __html: this.props.sidebar }}
