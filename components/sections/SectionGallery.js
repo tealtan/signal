@@ -50,6 +50,7 @@ class SectionGallery extends React.Component {
           @media screen and (min-width: 720px) {
             .galleryContainer {
               height: 310px;
+              padding: 0 30px;
             }
           }
 
