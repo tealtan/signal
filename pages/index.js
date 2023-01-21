@@ -4,8 +4,8 @@ import Meta from '../components/Meta'
 import SectionTop from '../components/sections/SectionTop'
 import SectionAbout from '../components/sections/SectionAbout'
 // import SectionEvents from '../components/sections/SectionEvents'
-// import SectionRecordings from '../components/sections/SectionRecordings'
-// import SectionVideos from '../components/sections/SectionVideos'
+import SectionRecordings from '../components/sections/SectionRecordings'
+import SectionVideos from '../components/sections/SectionVideos'
 import SectionGallery from '../components/sections/SectionGallery'
 import Footer from '../components/Footer'
 import Script from 'next/script'
@@ -16,7 +16,7 @@ export async function getStaticProps({ params }) {
   const sectionsData = await client.getDocuments([
     '8f96e3ca-1f81-47f8-98c5-21a5666a26ca', // sectionAbout
   //   'sectionEvents',
-  //   'sectionVideo',
+    'd3f9076d-5a9c-48bf-93dd-857d9bc95275', // 'sectionVideo',
   //   'sectionContact',
   ]);
 
@@ -30,9 +30,9 @@ export async function getStaticProps({ params }) {
     '*[_type == "sectionTop"]{ ..., "backgroundImage": { "url": backgroundImage.asset->url } }'
   );
 
-  // const sectionRecordingsData = await client.fetch(
-  //   '*[_type == "sectionRecordings"]{ ..., "recordings": recordings[]{ ..., "cover": cover.asset->url } }'
-  // )
+  const sectionRecordingsData = await client.fetch(
+    '*[_type == "sectionRecordings"]{ ..., "recordings": recordings[]{ ..., "cover": cover.asset->url } }'
+  )
 
   const sectionGalleryData = await client.fetch(
     '*[_type == "sectionGallery"]{ ..., "images": images[]{ _key, "url": asset->url } }'
@@ -44,7 +44,7 @@ export async function getStaticProps({ params }) {
     props: {
       sectionsData,
       sectionTopData,
-      // sectionRecordingsData,
+      sectionRecordingsData,
       sectionGalleryData,
       // eventsData,
     },
@@ -59,6 +59,9 @@ export default function Index(response) {
 
       <SectionTop {...response.sectionTopData[0]} />
       <SectionAbout {...response.sectionsData[0]} />
+
+      <SectionRecordings {...response.sectionRecordingsData[0]} />
+      <SectionVideos {...response.sectionsData[1]} />
 
       <Script src="https://use.typekit.net/yll6srm.js" />
 
@@ -396,17 +399,17 @@ export default function Index(response) {
 
 /*
 
-      <Meta />
+      // <Meta />
 
-      <SectionTop {...response.sectionTopData[0]} />
-      <SectionAbout {...response.sectionsData[0]} />
+      // <SectionTop {...response.sectionTopData[0]} />
+      // <SectionAbout {...response.sectionsData[0]} />
       <SectionEvents
         eventsList={response.eventsData}
         {...response.sectionsData[1]}
       />
       <SectionRecordings {...response.sectionRecordingsData[0]} />
       <SectionVideos {...response.sectionsData[2]} />
-      <SectionGallery {...response.sectionGalleryData[0]} />
-      <Footer {...response.sectionsData[3]} />
+      // <SectionGallery {...response.sectionGalleryData[0]} />
+      // <Footer {...response.sectionsData[3]} />
 
 */
