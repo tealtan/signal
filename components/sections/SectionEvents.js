@@ -8,10 +8,10 @@ import Event from '../Event'
 // For the year nav
 const currentYear = (new Date()).getFullYear();
 const startYear = 2008;
-const yearRange = (start, stop, step) => Array.from({ length: (stop - start) / step + 1}, (_, i) => start + (i * step));
+const getYearRange = (start, stop, step) => Array.from({ length: (stop - start) / step + 1}, (_, i) => start + (i * step));
 
-let yearArray = yearRange(currentYear, startYear, -1);
-yearArray = yearArray.filter(year => year != 2020); // Skip 2020
+let yearRange = getYearRange(currentYear, startYear, -1);
+yearRange = yearRange.filter(year => year != 2020); // Skip 2020
 
 class SectionEvents extends React.Component {
   state = { events: [] }
@@ -54,7 +54,7 @@ class SectionEvents extends React.Component {
             <div className="pastEvents">
               <h3>Past events</h3>
               <nav>
-                { yearArray.map((year, i) =>
+                { yearRange.map((year, i) =>
                   <a
                     className="pastEventsYear"
                     data-year={year}
