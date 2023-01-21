@@ -16,7 +16,7 @@ class SectionAbout extends React.Component {
       <>
         <Container>
           <Section>
-            <SectionHeader text={this.props.title} id="about" />
+            <SectionHeader text={this.props.title} id="about" color="#E5E5E5" />
             <div className="flex">
               <div className="drawerContents">
                 <BlockContent

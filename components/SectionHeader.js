@@ -5,20 +5,18 @@ export default function SectionHeader(props) {
 
       <style jsx>{`
         h2 {
-          font-size: 30px;
-          line-height: 32px;
-          padding-top: 12px;
+          font-size: 3.375rem;
+          line-height: 1;
           margin: 0 0 30px 0;
-          border-top: 5px solid #000;
           text-transform: uppercase;
           color: ${props.color};
         }
 
         @media screen and (min-width: 1024px) {
           h2 {
-            font-size: 60px;
-            line-height: 60px;
-            margin: 0 0 45px 0;
+            font-size: 12.5rem;
+            line-height: 0.875;
+            margin: 0 0 125px 0;
           }
         }
       `}</style>

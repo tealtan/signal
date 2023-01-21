@@ -21,7 +21,7 @@ class Footer extends React.Component {
 
         <style jsx>{`
           span {
-            font-size: 12px;
+            font-size: 0.75rem;
             color: #999;
           }
         `}</style>
