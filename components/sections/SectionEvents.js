@@ -5,6 +5,14 @@ import Section from './Section'
 import SectionHeader from '../SectionHeader'
 import Event from '../Event'
 
+// For the year nav
+const currentYear = (new Date()).getFullYear();
+const startYear = 2008;
+const yearRange = (start, stop, step) => Array.from({ length: (stop - start) / step + 1}, (_, i) => start + (i * step));
+
+let yearArray = yearRange(currentYear, startYear, -1);
+yearArray = yearArray.filter(year => year != 2020); // Skip 2020
+
 class SectionEvents extends React.Component {
   state = { events: [] }
 
@@ -43,6 +51,18 @@ class SectionEvents extends React.Component {
         <Container>
           <Section hasBorder>
             <SectionHeader text={this.props.title} color="#FF0058" id="events" />
+            <div className="pastEvents">
+              <h3>Past events</h3>
+              <nav>
+                { yearArray.map((year, i) =>
+                  <a
+                    className="pastEventsYear"
+                    data-year={year}
+                    href={`#year-${year}`}
+                    key={i}>{year}</a>
+                )}
+              </nav>
+            </div>
             <div>
               {this.state.events.map((event) => (
                 <Event key={event._id} {...event} />
@@ -50,7 +70,32 @@ class SectionEvents extends React.Component {
             </div>
           </Section>
         </Container>
-        <style jsx>{``}</style>
+        <style jsx>{`
+          .pastEvents {
+            margin: 0 0 30px 0;
+          }
+          @media screen and (min-width: 720px) {
+            .pastEvents {
+              margin: -105px 0 125px 0;
+            }
+          }
+
+          .pastEvents h3 {
+            display: inline;
+            font-size: 1.125rem;
+            margin-right: 0.625rem;
+          }
+          .pastEvents nav {
+            display: inline;
+          }
+          .pastEventsYear {
+            display: inline-block;
+            font-size: 1.125rem;
+            font-weight: 700;
+            margin-right: 0.625rem;
+            color: #FF0058;
+          }
+        `}</style>
       </>
     )
   }
