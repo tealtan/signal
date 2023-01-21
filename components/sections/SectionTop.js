@@ -78,7 +78,7 @@ class SectionTop extends React.Component {
 
           figcaption {
             color: #cccccc;
-            font-size: 12px;
+            font-size: 0.75rem;
             text-align: right;
             margin: 5px 5px 0 0;
           }
@@ -104,8 +104,8 @@ class SectionTop extends React.Component {
             display: block;
             padding: 14px 15px;
             margin: 5px 15px;
-            font-size: 18px;
-            line-height: 22px;
+            font-size: 1.125rem;
+            line-height: 1.22;
             font-weight: 700;
             text-transform: uppercase;
             color: #fff;

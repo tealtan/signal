@@ -39,8 +39,8 @@ class SectionAbout extends React.Component {
           .aboutMore {
             display: block;
             margin-top: 20px;
-            font-size: 16px;
-            line-height: 24px;
+            font-size: 1rem;
+            line-height: 1.5;
             font-weight: 700;
           }
 
@@ -54,8 +54,8 @@ class SectionAbout extends React.Component {
             }
 
             .aboutMore {
-              font-size: 18px;
-              line-height: 28px;
+              font-size: 1.125rem;
+              line-height: 1.55;
             }
 
             .sidebar {
