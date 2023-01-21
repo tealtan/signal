@@ -6,7 +6,7 @@ import SectionAbout from '../components/sections/SectionAbout'
 // import SectionEvents from '../components/sections/SectionEvents'
 // import SectionRecordings from '../components/sections/SectionRecordings'
 // import SectionVideos from '../components/sections/SectionVideos'
-// import SectionGallery from '../components/sections/SectionGallery'
+import SectionGallery from '../components/sections/SectionGallery'
 import Footer from '../components/Footer'
 import Script from 'next/script'
 
@@ -34,23 +34,18 @@ export async function getStaticProps({ params }) {
   //   '*[_type == "sectionRecordings"]{ ..., "recordings": recordings[]{ ..., "cover": cover.asset->url } }'
   // )
 
-  // const sectionGalleryData = await client.fetch(
-  //   '*[_type == "sectionGallery"]{ ..., "images": images[]{ _key, "url": asset->url } }'
-  // )
+  const sectionGalleryData = await client.fetch(
+    '*[_type == "sectionGallery"]{ ..., "images": images[]{ _key, "url": asset->url } }'
+  )
 
-
-  const abData = await client.fetch(
-    '*[_type == "sectionAbout"]'
-  );
-
-  console.log(abData);
+  console.log(sectionGalleryData);
 
   return {
     props: {
       sectionsData,
       sectionTopData,
       // sectionRecordingsData,
-      // sectionGalleryData,
+      sectionGalleryData,
       // eventsData,
     },
     revalidate: 60, // regenerate page every 1 min
@@ -67,6 +62,7 @@ export default function Index(response) {
 
       <Script src="https://use.typekit.net/yll6srm.js" />
 
+      <SectionGallery {...response.sectionGalleryData[0]} />
       <Footer />
 
       <style jsx global>{`
