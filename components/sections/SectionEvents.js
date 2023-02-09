@@ -1,5 +1,7 @@
 import React from 'react'
 
+import client from "../../sanityClient";
+
 import Container from '../Container'
 import Section from './Section'
 import SectionHeader from '../SectionHeader'
@@ -17,32 +19,24 @@ class SectionEvents extends React.Component {
   state = { events: [] }
 
   componentDidMount() {
-    // this.fetchEventsFromCurrentSeason().then(this.setEvents)
-    this.setEvents()
+    this.setEvents(this.props.eventsList)
   }
 
-  // fetchEventsFromCurrentSeason() {
-  // var currentYear = new Date().getFullYear()
-  // return this.client.getEntries({
-  //   content_type: 'events',
-  //   'fields.date[gte]': currentYear - 1 + '-01-01T00:00:00Z',
-  //   order: 'fields.date'
-  // })
-  // }
-
-  // fetchEventsFromYear = (year) => {
-  // this.client.getEntries({
-  //   content_type: 'events',
-  //   'fields.date[lte]': year + 1 + '-01-01T00:00:00Z',
-  //   'fields.date[gte]': year + '-01-01T00:00:00Z',
-  //   order: 'fields.date'
-  // })
-  // }
-
   setEvents = (response) => {
-    const eventsArray = Object.values(this.props.eventsList)
-    this.setState({ events: eventsArray })
-    // console.log(eventsArray)
+    this.setState({ events: response })
+    console.log(response)
+  }
+
+  fetchEventsFromYear = (year) => {
+    client
+      .fetch(
+        `*[_type == "event"
+          && date > "${year}-01-01"
+          && date < "${year}-12-31'"]
+          | order(date)`
+      )
+      .then((data) => { this.setEvents(data); })
+      .catch(console.error);
   }
 
   render() {
@@ -59,6 +53,7 @@ class SectionEvents extends React.Component {
                     className="pastEventsYear"
                     data-year={year}
                     href={`#year-${year}`}
+                    onClick={() => this.fetchEventsFromYear(year)}
                     key={i}>{year}</a>
                 )}
               </nav>
