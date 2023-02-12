@@ -15,7 +15,7 @@ class SectionDonate extends React.Component {
     return (
       <>
         <Container>
-          <Section>
+          <Section hasBorder>
             <SectionHeader
               text={this.props.title}
               id="support"
