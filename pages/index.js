@@ -7,6 +7,7 @@ import SectionEvents from '../components/sections/SectionEvents'
 import SectionRecordings from '../components/sections/SectionRecordings'
 import SectionVideos from '../components/sections/SectionVideos'
 import SectionDonate from '../components/sections/SectionDonate'
+import SectionContact from '../components/sections/SectionContact'
 import SectionGallery from '../components/sections/SectionGallery'
 import Footer from '../components/Footer'
 import Script from 'next/script'
@@ -19,6 +20,7 @@ export async function getStaticProps({ params }) {
     '53f326f2-297d-40cb-aca4-8a407d218a07', // 'sectionEvents',
     'd3f9076d-5a9c-48bf-93dd-857d9bc95275', // 'sectionVideo',
     '1515722b-7fd7-4389-a9bc-758c28107755', // sectionDonate,
+    '02decdc0-9029-4ff5-a5ad-73950328a28f',
   //   'sectionContact',
   ]);
 
@@ -68,6 +70,7 @@ export default function Index(response) {
       <SectionRecordings {...response.sectionRecordingsData[0]} />
       <SectionVideos {...response.sectionsData[2]} />
       <SectionDonate {...response.sectionsData[3]} />
+      <SectionContact {...response.sectionsData[4]} />
       <SectionGallery {...response.sectionGalleryData[0]} />
       <Footer />
       <Script src="https://use.typekit.net/yll6srm.js" />
