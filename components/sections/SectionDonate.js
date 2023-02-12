@@ -28,10 +28,13 @@ class SectionDonate extends React.Component {
                   imageOptions={{ w: 750, fit: 'max' }}
                 />
               </div>
-              <div
-                className="sidebar supportSidebar"
-                dangerouslySetInnerHTML={{ __html: this.props.sidebar }}
-              ></div>
+              <div className="sidebar supportSidebar">
+                <div dangerouslySetInnerHTML={{ __html: this.props.sidebarDonateButton }}></div>
+                <BlockContent
+                  blocks={this.props.sidebarText}
+                  imageOptions={{ w: 750, fit: 'max' }}
+                />
+              </div>
             </div>
           </Section>
         </Container>

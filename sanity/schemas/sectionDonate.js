@@ -15,9 +15,14 @@ export default {
       type: 'blockContent',
     },
     {
-      name: 'sidebar',
-      title: 'Sidebar',
+      name: 'sidebarDonateButton',
+      title: 'Sidebar Donate Button',
       type: 'text',
+    },
+    {
+      name: 'sidebarText',
+      title: 'Sidebar Text',
+      type: 'blockContent',
     },
   ],
   preview: {
