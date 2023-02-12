@@ -11,6 +11,17 @@ class SectionAbout extends React.Component {
   //   console.log(this.props)
   // }
 
+  state = {
+    drawerHidden: true,
+  }
+
+  toggleDrawer() {
+    this.setState({
+      drawerHidden: !this.state.drawerHidden,
+    })
+    console.log(this.state.drawerHidden)
+  }
+
   render() {
     return (
       <>
@@ -18,11 +29,27 @@ class SectionAbout extends React.Component {
           <Section>
             <SectionHeader text={this.props.title} id="about" color="#E5E5E5" />
             <div className="flex">
-              <div className="drawerContents">
+              <div
+                className={`drawer ${
+                  this.state.drawerHidden ? 'drawerClosed' : ''
+                }`}
+              >
                 <BlockContent
                   blocks={this.props.body}
                   imageOptions={{ w: 750, fit: 'max' }}
                 />
+                <a
+                  className="aboutMore"
+                  onClick={this.toggleDrawer.bind(this)}
+                >Read Full Bio</a>
+                <div
+                  className="drawerContents"
+                >
+                  <BlockContent
+                    blocks={this.props.bodyReadMore}
+                    imageOptions={{ w: 750, fit: 'max' }}
+                  />
+                </div>
               </div>
               <div
                 className="sidebar"
@@ -32,11 +59,11 @@ class SectionAbout extends React.Component {
           </Section>
         </Container>
         <style jsx>{`
-          .drawer:not(.drawerClosed) .drawerContents {
-            padding-top: 20px;
+          .drawer {
+            cursor: auto;
           }
-
           .aboutMore {
+            cursor: pointer;
             display: block;
             margin-top: 20px;
             font-size: 1rem;
@@ -49,10 +76,6 @@ class SectionAbout extends React.Component {
           }
 
           @media screen and (min-width: 1024px) {
-            .drawer:not(.drawerClosed) .drawerContents {
-              padding-top: 30px;
-            }
-
             .aboutMore {
               font-size: 1.125rem;
               line-height: 1.55;

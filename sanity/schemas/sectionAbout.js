@@ -15,6 +15,11 @@ export default {
       type: 'blockContent',
     },
     {
+      name: 'bodyFullBio',
+      title: 'Full Bio',
+      type: 'blockContent',
+    },
+    {
       name: 'sidebar',
       title: 'Sidebar',
       type: 'text',
