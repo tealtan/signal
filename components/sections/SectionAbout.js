@@ -85,16 +85,13 @@ class SectionAbout extends React.Component {
               width: 220px;
             }
           }
-        `}</style>
-        <style global jsx>
-          {`
-            @media screen and (max-width: 720px) {
-              .sidebar {
-                display: none;
-              }
+
+          @media screen and (max-width: 720px) {
+            .sidebar {
+              display: none;
             }
-          `}
-        </style>
+          }
+        `}</style>
       </>
     )
   }

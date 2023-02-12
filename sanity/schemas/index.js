@@ -4,8 +4,9 @@ import sectionTop from './sectionTop'
 import sectionAbout from './sectionAbout'
 import sectionEvents from './sectionEvents'
 import sectionRecordings from './sectionRecordings'
-import sectionGallery from './sectionGallery'
 import sectionVideo from './sectionVideo'
+import sectionDonate from './sectionDonate'
+import sectionGallery from './sectionGallery'
 
 import navLink from './navLink'
 import event from './event'
@@ -20,5 +21,6 @@ export const schemaTypes = [
   sectionEvents, event,
   sectionRecordings, recording, recordingLink,
   sectionVideo,
+  sectionDonate,
   sectionGallery,
 ]
