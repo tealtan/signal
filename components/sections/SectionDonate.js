@@ -57,6 +57,7 @@ class SectionDonate extends React.Component {
             }
             .donateContent p {
               margin-bottom: 0.3rem;
+              min-height: 1em;
             }
             .supportSidebar p {
               display: block;
