@@ -62,13 +62,6 @@ class SectionDonate extends React.Component {
               margin-bottom: 0.3rem;
               min-height: 1em;
             }
-            .supportSidebar p {
-              display: block;
-              font-size: 13px;
-              line-height: 20px;
-              color: #666;
-              margin-bottom: 20px;
-            }
             .donateButton {
               cursor: pointer;
               display: block;

@@ -327,6 +327,7 @@ export default function Index(response) {
           }
         }
 
+        .sidebar p,
         .sidebar span {
           display: block;
           font-size: 13px;
