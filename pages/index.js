@@ -1,15 +1,20 @@
 import React from 'react'
 
 import Meta from '../components/Meta'
+
 import SectionTop from '../components/sections/SectionTop'
 import SectionAbout from '../components/sections/SectionAbout'
 import SectionProjects from '../components/sections/SectionProjects'
+
 import SectionEvents from '../components/sections/SectionEvents'
+import SectionPeople from '../components/sections/SectionPeople'
 import SectionRecordings from '../components/sections/SectionRecordings'
+
 import SectionVideos from '../components/sections/SectionVideos'
 import SectionDonate from '../components/sections/SectionDonate'
 import SectionContact from '../components/sections/SectionContact'
 import SectionGallery from '../components/sections/SectionGallery'
+
 import Footer from '../components/Footer'
 import Script from 'next/script'
 
@@ -20,6 +25,7 @@ export async function getStaticProps({ params }) {
     '8f96e3ca-1f81-47f8-98c5-21a5666a26ca', // sectionAbout
     '6b650ca6-cccb-4a2e-b44f-caa6e02ae80b', // sectionProjects
     '53f326f2-297d-40cb-aca4-8a407d218a07', // 'sectionEvents',
+    'e616fa14-5687-4bcb-963b-215202a344a9', // 'sectionPeople',
     'd3f9076d-5a9c-48bf-93dd-857d9bc95275', // 'sectionVideo',
     '1515722b-7fd7-4389-a9bc-758c28107755', // sectionDonate,
     '02decdc0-9029-4ff5-a5ad-73950328a28f',
@@ -70,10 +76,11 @@ export default function Index(response) {
         eventsList={response.eventsData}
         {...response.sectionsData[2]}
       />
+      <SectionPeople {...response.sectionsData[3]} />
       <SectionRecordings {...response.sectionRecordingsData[0]} />
-      <SectionVideos {...response.sectionsData[3]} />
-      <SectionDonate {...response.sectionsData[4]} />
-      <SectionContact {...response.sectionsData[5]} />
+      <SectionVideos {...response.sectionsData[4]} />
+      <SectionDonate {...response.sectionsData[5]} />
+      <SectionContact {...response.sectionsData[6]} />
       <SectionGallery {...response.sectionGalleryData[0]} />
       <Footer />
       <Script src="https://use.typekit.net/yll6srm.js" />
