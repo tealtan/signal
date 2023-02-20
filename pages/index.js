@@ -262,8 +262,10 @@ export default function Index(response) {
           margin: 5px 5px 0 0;
         }
 
-        .bigText,
+        blockquote,
+        .bigText
         .quoteText p {
+          display: inline;
           font-size: 22px;
           line-height: 28px;
           font-style: italic;
@@ -273,13 +275,15 @@ export default function Index(response) {
         }
 
         @media screen and (min-width: 720px) {
-          .bigText,
+          blockquote,
+          .bigText
           .quoteText p {
             font-size: 28px;
             line-height: 40px;
           }
         }
 
+        h6,
         .quoteSource {
           margin-left: 15px;
           text-transform: uppercase;
@@ -291,6 +295,7 @@ export default function Index(response) {
           color: #999;
         }
 
+        blockquote,
         .quote p {
           max-width: 750px;
         }
