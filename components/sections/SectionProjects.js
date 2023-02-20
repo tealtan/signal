@@ -6,57 +6,27 @@ import SectionHeader from '../SectionHeader'
 
 import BlockContent from '@sanity/block-content-to-react'
 
-class SectionAbout extends React.Component {
+class SectionProjects extends React.Component {
   // componentDidMount() {
   //   console.log(this.props)
   // }
-
-  state = {
-    drawerHidden: true,
-  }
-
-  toggleDrawer() {
-    this.setState({
-      drawerHidden: !this.state.drawerHidden,
-    })
-    console.log(this.state.drawerHidden)
-  }
 
   render() {
     return (
       <>
         <Container>
           <Section>
-            <SectionHeader text={this.props.title} id="about" color="#E5E5E5" />
-            <div className="flex">
-              <div
-                className={`drawer ${
-                  this.state.drawerHidden ? 'drawerClosed' : ''
-                }`}
-              >
-                <div style={{maxWidth: '750px'}}>
-                  <BlockContent
+            <SectionHeader text={this.props.title} id="projects" color="#E9D114" />
+            <div style={{maxWidth: '750px'}}>
+                <BlockContent
                     blocks={this.props.body}
                     imageOptions={{ w: 750, fit: 'max' }}
-                  />
-                </div>
-                <a
-                  className="aboutMore"
-                  onClick={this.toggleDrawer.bind(this)}
-                >Read Full Bio</a>
-                <div
-                  className="drawerContents"
-                >
-                  <BlockContent
-                    blocks={this.props.bodyReadMore}
-                    imageOptions={{ w: 750, fit: 'max' }}
-                  />
-                </div>
-              </div>
-              <div
-                className="sidebar"
-                dangerouslySetInnerHTML={{ __html: this.props.sidebar }}
-              ></div>
+                />
+                <p>
+                    <a href="#events">
+                        <strong>View complete past & current Signal projects here.</strong>
+                    </a>
+                </p>
             </div>
           </Section>
         </Container>
@@ -99,4 +69,4 @@ class SectionAbout extends React.Component {
   }
 }
 
-export default SectionAbout
+export default SectionProjects

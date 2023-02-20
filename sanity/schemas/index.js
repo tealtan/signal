@@ -2,6 +2,7 @@ import blockContent from './blockContent'
 
 import sectionTop from './sectionTop'
 import sectionAbout from './sectionAbout'
+import sectionProjects from './sectionProjects'
 import sectionEvents from './sectionEvents'
 import sectionRecordings from './sectionRecordings'
 import sectionVideo from './sectionVideo'
@@ -19,6 +20,7 @@ export const schemaTypes = [
 
   sectionTop, navLink,
   sectionAbout,
+  sectionProjects,
   sectionEvents, event,
   sectionRecordings, recording, recordingLink,
   sectionVideo,
