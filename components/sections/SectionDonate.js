@@ -22,7 +22,7 @@ class SectionDonate extends React.Component {
               color="#7D83E6"
             />
             <div className="flex">
-              <div className="donateContent">
+              <div className="donateContent" style={{maxWidth: '750px'}}>
                 <BlockContent
                   blocks={this.props.body}
                   imageOptions={{ w: 750, fit: 'max' }}
