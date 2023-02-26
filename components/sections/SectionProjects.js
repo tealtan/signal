@@ -17,7 +17,7 @@ class SectionProjects extends React.Component {
     return (
       <>
         <Container>
-          <Section>
+          <Section hasBorder>
             <SectionHeader text={this.props.title} id="projects" color="#E9D114" />
             <div style={{maxWidth: '750px'}}>
                 <BlockContent
