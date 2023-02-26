@@ -28,6 +28,10 @@ class SectionListen extends React.Component {
           </Section>
         </Container>
         <style jsx>{`
+          .albums {
+            width: 100%;
+          }
+
           @media screen and (max-width: 720px) {
             .sectionName {
               margin-bottom: 60px;

@@ -46,6 +46,7 @@ class SectionContact extends React.Component {
           }
           .contact-section {
             display: flex;
+            flex-direction: column;
           }
           .half {
             margin: 0 0 30px 0;
@@ -55,6 +56,7 @@ class SectionContact extends React.Component {
             .contact-section {
               margin: 0;
               display: flex;
+              flex-direction: row;
             }
 
             .half {
