@@ -41,7 +41,7 @@ class Project extends React.Component {
             <div className="projectDetails drawerContents">
               <BlockContent
                 blocks={this.props.body}
-                imageOptions={{ w: 2000, fit: 'max' }}
+                imageOptions={{ w: 1000, fit: 'max' }}
                 projectId={"q4ur6w8h"}
                 dataset={"production"}
               />
