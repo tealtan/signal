@@ -14,6 +14,12 @@ export default {
       title: 'Body',
       type: 'blockContent',
     },
+    {
+      name: 'projects',
+      title: 'Projects',
+      type: 'array',
+      of: [{type: 'project'}],
+    },
   ],
   preview: {
     select: {title: 'title'},

@@ -12,6 +12,7 @@ import sectionContact from './sectionContact'
 import sectionGallery from './sectionGallery'
 
 import navLink from './navLink'
+import project from './project'
 import event from './event'
 import people from './people'
 import recording from './recording'
@@ -22,7 +23,7 @@ export const schemaTypes = [
 
   sectionTop, navLink,
   sectionAbout,
-  sectionProjects,
+  sectionProjects, project,
   sectionEvents, event,
   sectionPeople, people,
   sectionRecordings, recording, recordingLink,

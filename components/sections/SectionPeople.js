@@ -3,7 +3,6 @@ import React from 'react'
 import Container from '../Container'
 import Section from './Section'
 import SectionHeader from '../SectionHeader'
-  import Person from '../Person'
 import PersonGroup from '../PersonGroup'
 
 import BlockContent from '@sanity/block-content-to-react'

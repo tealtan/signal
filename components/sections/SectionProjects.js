@@ -6,6 +6,8 @@ import SectionHeader from '../SectionHeader'
 
 import BlockContent from '@sanity/block-content-to-react'
 
+import Project from '../Project'
+
 class SectionProjects extends React.Component {
   // componentDidMount() {
   //   console.log(this.props)
@@ -28,6 +30,9 @@ class SectionProjects extends React.Component {
                     </a>
                 </p>
             </div>
+            {this.props.projects.map((project) => (
+              <Project key={project._id} {...project}></Project>
+            ))}
           </Section>
         </Container>
         <style jsx>{`
