@@ -304,6 +304,12 @@ export default function Index(response) {
           color: #999;
         }
 
+        figure + h6,
+        figure + .quoteSource {
+          text-transform: none;
+          float: right;
+        }
+
         blockquote,
         .quote p {
           max-width: 750px;
