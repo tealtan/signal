@@ -22,13 +22,13 @@ import client from '../sanityClient'
 
 export async function getStaticProps({ params }) {
   const sectionsData = await client.getDocuments([
-    '8f96e3ca-1f81-47f8-98c5-21a5666a26ca', // sectionAbout
-    '6b650ca6-cccb-4a2e-b44f-caa6e02ae80b', // sectionProjects
-    '53f326f2-297d-40cb-aca4-8a407d218a07', // 'sectionEvents'
-    'e616fa14-5687-4bcb-963b-215202a344a9', // 'sectionPeople'
-    'd3f9076d-5a9c-48bf-93dd-857d9bc95275', // sectionVideo
-    '1515722b-7fd7-4389-a9bc-758c28107755', // sectionDonate
-    '02decdc0-9029-4ff5-a5ad-73950328a28f', // sectionContact
+    'sectionAbout',
+    'sectionProjects',
+    'sectionEvents',
+    'sectionPeople',
+    'sectionVideo',
+    'sectionDonate',
+    'sectionContact',
   ]);
 
   const eventsData = await client.fetch(

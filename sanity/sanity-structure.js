@@ -4,34 +4,34 @@ export const structure = (S) =>
     .items([
       S.listItem()
         .title('Top Section')
-        .child(S.editor().schemaType('sectionTop').documentId('ce298dc2-2c8d-4254-b0ab-d0ab0ae14875')),
+        .child(S.editor().schemaType('sectionTop').documentId('sectionTop')),
       S.listItem()
         .title('About Section')
-        .child(S.editor().schemaType('sectionAbout').documentId('8f96e3ca-1f81-47f8-98c5-21a5666a26ca')),
+        .child(S.editor().schemaType('sectionAbout').documentId('sectionAbout')),
       S.listItem()
         .title('Projects Section')
-        .child(S.editor().schemaType('sectionProjects').documentId('6b650ca6-cccb-4a2e-b44f-caa6e02ae80b')),
+        .child(S.editor().schemaType('sectionProjects').documentId('sectionProjects')),
       S.listItem()
         .title('Events Section')
-        .child(S.editor().schemaType('sectionEvents').documentId('53f326f2-297d-40cb-aca4-8a407d218a07')),
+        .child(S.editor().schemaType('sectionEvents').documentId('sectionEvents')),
       S.listItem()
         .title('People Section')
-        .child(S.editor().schemaType('sectionPeople').documentId('e616fa14-5687-4bcb-963b-215202a344a9')),
+        .child(S.editor().schemaType('sectionPeople').documentId('sectionPeople')),
       S.listItem()
         .title('Recordings Section')
-        .child(S.editor().schemaType('sectionRecordings').documentId('e5eb3be1-f10a-4d22-ba7d-064568687b4d')),
+        .child(S.editor().schemaType('sectionRecordings').documentId('sectionRecordings')),
       S.listItem()
         .title('Video Section')
-        .child(S.editor().schemaType('sectionVideo').documentId('d3f9076d-5a9c-48bf-93dd-857d9bc95275')),
+        .child(S.editor().schemaType('sectionVideo').documentId('sectionVideo')),
       S.listItem()
         .title('Gallery Section')
-        .child(S.editor().schemaType('sectionGallery').documentId('a708e362-e9f9-4a00-9940-60fdc27bc910')),
+        .child(S.editor().schemaType('sectionGallery').documentId('sectionGallery')),
       S.listItem()
         .title('Donate Section')
-        .child(S.editor().schemaType('sectionDonate').documentId('1515722b-7fd7-4389-a9bc-758c28107755')),
+        .child(S.editor().schemaType('sectionDonate').documentId('sectionDonate')),
       S.listItem()
         .title('Contact Section')
-        .child(S.editor().schemaType('sectionContact').documentId('02decdc0-9029-4ff5-a5ad-73950328a28f')),
+        .child(S.editor().schemaType('sectionContact').documentId('sectionContact')),
 
       S.divider(),
 
