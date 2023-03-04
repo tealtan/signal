@@ -1,4 +1,4 @@
-export const structure = (S) =>
+export default (S) =>
   S.list()
     .title('Content')
     .items([
