@@ -51,9 +51,8 @@ class Event extends React.Component {
           className={`event drawer ${
             this.state.drawerHidden ? 'drawerClosed' : ''
           }`}
-          onClick={this.toggleDrawer.bind(this)}
         >
-          <div className="eventHead">
+          <div className="eventHead" onClick={this.toggleDrawer.bind(this)}>
             <span className="eventDate">
               {this.props.dateString || formatDate(this.props.date)}
             </span>

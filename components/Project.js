@@ -25,9 +25,8 @@ class Project extends React.Component {
           className={`project drawer ${
             this.state.drawerHidden ? 'drawerClosed' : ''
           }`}
-          onClick={this.toggleDrawer.bind(this)}
         >
-          <div className="projectHead">
+          <div className="projectHead" onClick={this.toggleDrawer.bind(this)}>
             <span className="eventDate">
               {this.props.title}
             </span>
