@@ -24,7 +24,7 @@ export const structure = (S) =>
         .title('Video Section')
         .child(S.editor().schemaType('sectionVideo').documentId('d3f9076d-5a9c-48bf-93dd-857d9bc95275')),
       S.listItem()
-        .title('Photos Section')
+        .title('Gallery Section')
         .child(S.editor().schemaType('sectionGallery').documentId('a708e362-e9f9-4a00-9940-60fdc27bc910')),
       S.listItem()
         .title('Donate Section')
