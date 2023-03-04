@@ -39,12 +39,23 @@ class Project extends React.Component {
           </div>
           {!this.state.drawerHidden && (
             <div className="projectDetails drawerContents">
-              <BlockContent
-                blocks={this.props.body}
-                imageOptions={{ w: 1000, fit: 'max' }}
-                projectId={"q4ur6w8h"}
-                dataset={"production"}
-              />
+              <div className="flex">
+                <div style={{maxWidth: '750px'}}>
+                <BlockContent
+                  blocks={this.props.body}
+                  imageOptions={{ w: 750, fit: 'max' }}
+                  projectId={"q4ur6w8h"}
+                  dataset={"production"}
+                />
+                </div>
+                <div className="sidebar">
+                  <BlockContent
+                    blocks={this.props.sidebar}
+                    projectId={"q4ur6w8h"}
+                    dataset={"production"}
+                  />
+                </div>
+              </div>
             </div>
           )}
         </div>
@@ -84,6 +95,18 @@ class Project extends React.Component {
             .projectHead {
               display: block;
               width: calc(100% - 70px);
+            }
+          }
+
+          @media screen and (max-width: 1024px) {
+            .sidebar {
+              display: none;
+            }
+          }
+
+          @media screen and (min-width: 1024px) {
+            .sidebar {
+              width: 220px;
             }
           }
 

@@ -12,11 +12,16 @@ export default {
       type: 'string',
       validation: Rule => Rule.required()
     },
-	{
+    {
       name: 'body',
       title: 'Body',
       type: 'blockContent',
     },
+    {
+      name: 'sidebar',
+      title: 'Sidebar',
+      type: 'blockContent',
+    }
   ],
   preview: {
     select: {
