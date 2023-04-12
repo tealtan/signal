@@ -15,6 +15,7 @@ import navLink from './navLink'
 import project from './project'
 import event from './event'
 import people from './people'
+import bio from './bio'
 import recording from './recording'
 import recordingLink from './recordingLink'
 
@@ -25,7 +26,7 @@ export const schemaTypes = [
   sectionAbout,
   sectionProjects, project,
   sectionEvents, event,
-  sectionPeople, people,
+  sectionPeople, people, bio,
   sectionRecordings, recording, recordingLink,
   sectionVideo,
   sectionDonate,
