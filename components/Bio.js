@@ -4,9 +4,9 @@ import Link from 'next/link'
 import BlockContent from '@sanity/block-content-to-react'
 
 class Bio extends React.Component {
-  componentDidMount() {
-    console.log(this.props)
-  }
+  // componentDidMount() {
+  //   console.log(this.props)
+  // }
 
   render() {
     return (

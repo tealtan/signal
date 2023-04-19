@@ -42,7 +42,7 @@ export async function getStaticProps({ params }) {
 }
 
 export default function BioPage(response) {
-  console.log(response);
+  // console.log(response);
 
   return (
     <>
