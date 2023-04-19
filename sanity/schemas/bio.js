@@ -1,4 +1,4 @@
-import {MdLocalPlay as icon} from 'react-icons/md'
+import {MdAccountCircle as icon} from 'react-icons/md'
 
 export default {
   name: 'bio',
@@ -21,10 +21,20 @@ export default {
         maxLength: 200,
       },
     },
-  {
+    {
       name: 'body',
       title: 'Body',
       type: 'blockContent',
+    },
+    {
+      name: 'portraitPhotoImage',
+      title: 'Portrait Photo',
+      type: 'image',
+    },
+    {
+      name: 'photoCredit',
+      title: 'Photo Credit',
+      type: 'string',
     },
   ],
   preview: {

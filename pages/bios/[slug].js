@@ -24,8 +24,8 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
 
   const bioData = await client.fetch(
-    '*[_type == "bio" && slug.current == "' + params.slug + '"' +
-      '][0]'
+    '*[_type == "bio" && slug.current == "' + params.slug + '"' + '][0]' +
+      '{ ..., "portraitPhotoImage": { "url": portraitPhotoImage.asset->url } }'
   )
 
   const topData = await client.fetch(

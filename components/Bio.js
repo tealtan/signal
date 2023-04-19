@@ -3,9 +3,9 @@ import React from 'react'
 import BlockContent from '@sanity/block-content-to-react'
 
 class Bio extends React.Component {
-  // componentDidMount() {
-  //   console.log(this.props)
-  // }
+  componentDidMount() {
+    console.log(this.props)
+  }
 
   render() {
     return (
@@ -14,7 +14,7 @@ class Bio extends React.Component {
             <div>
               <img
                 className="bioImage"
-                src="https://placehold.co/500x750/png"
+                src={ this.props.portraitPhotoImage.url + '?w=500&auto=format&q=75' }
                 alt={ "Picture of " + this.props.title }
               />
             </div>
