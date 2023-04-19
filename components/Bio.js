@@ -12,7 +12,9 @@ class Bio extends React.Component {
     return (
       <>
         <div className="bioWrapper">
-          <a className="closeButton" href="/">×</a>
+          <Link href="/">
+            <a className="closeButton">×</a>
+          </Link>
           <h1>{this.props.title}</h1>
           <div className="bioLayout">
             <div>
