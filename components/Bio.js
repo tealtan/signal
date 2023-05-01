@@ -17,12 +17,12 @@ class Bio extends React.Component {
           </Link>
           <h1>{this.props.title}</h1>
           <div className="bioLayout">
-            <div>
+            <div className="bioImage">
               <img
-                className="bioImage"
                 src={ this.props.portraitPhotoImage.url + '?w=500&auto=format&q=75' }
                 alt={ "Picture of " + this.props.title }
               />
+              <figcaption>{this.props.photoCredit}</figcaption>
             </div>
             <div>
                 <BlockContent
@@ -92,6 +92,7 @@ class Bio extends React.Component {
 
           @media screen and (min-width: 720px) {
             .bioImage {
+              align-self: flex-start; // needed to make height auto inside a flex container, to let sticky work
               position: sticky; top: 60px;
             }
           }
