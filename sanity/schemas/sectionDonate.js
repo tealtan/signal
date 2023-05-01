@@ -2,7 +2,6 @@ export default {
   name: 'sectionDonate',
   title: 'Section: Donate',
   type: 'document',
-  __experimental_actions: [/*'create',*/ 'update', /*'delete',*/ 'publish'],
   fields: [
     {
       name: 'title',

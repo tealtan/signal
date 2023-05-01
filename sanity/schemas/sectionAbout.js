@@ -2,7 +2,6 @@ export default {
   name: 'sectionAbout',
   title: 'Section: About',
   type: 'document',
-  __experimental_actions: [/*'create',*/ 'update', /*'delete',*/ 'publish'],
   fields: [
     {
       name: 'title',
