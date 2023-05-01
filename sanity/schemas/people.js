@@ -22,6 +22,11 @@ export default {
       title: 'Group',
       type: 'boolean',
     },
+    {
+      name: 'bioLink',
+      title: 'Bio Link',
+      type: 'url',
+    },
   ],
   preview: {
     select: {
