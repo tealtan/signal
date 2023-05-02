@@ -10,13 +10,13 @@ class Person extends React.Component {
       <>
         <div className="people">
           {this.props.bioLink ? (
-              <p className={this.props.group ? 'person-group' : ''}>
+              <p className={this.props.isInstrument ? 'instrument' : ''}>
                 <a href={this.props.bioLink}>
                   {this.props.title}
                 </a>
               </p>
           ) : (
-            <p className={this.props.group ? 'person-group' : ''}>
+            <p className={this.props.isInstrument ? 'instrument' : ''}>
               {this.props.title}
             </p>
           )}
@@ -41,7 +41,7 @@ class Person extends React.Component {
           p {
             margin: 0;
           }
-          .person-group {
+          .instrument {
             font-style: italic;
             margin-top: 1.75rem;
           }

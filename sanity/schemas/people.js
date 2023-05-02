@@ -18,8 +18,8 @@ export default {
       type: 'string',
     },
     {
-      name: 'group',
-      title: 'Group',
+      name: 'isInstrument',
+      title: 'Is an Instrument',
       type: 'boolean',
     },
     {
