@@ -26,6 +26,9 @@ export default {
       name: 'bioLink',
       title: 'Bio Link',
       type: 'url',
+      validation: Rule => Rule.uri({
+        allowRelative: true
+      })
     },
   ],
   preview: {
