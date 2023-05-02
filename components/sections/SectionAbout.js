@@ -48,7 +48,7 @@ class SectionAbout extends React.Component {
                   className="drawerContents"
                 >
                   <BlockContent
-                    blocks={this.props.bodyReadMore}
+                    blocks={this.props.bodyFullBio}
                     imageOptions={{ w: 750, fit: 'max' }}
                   />
                 </div>
