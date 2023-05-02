@@ -17,6 +17,7 @@ export default {
     {
       name: 'sidebar',
       title: 'Sidebar',
+      description: 'Uses HTML. Contact Allen for edits.',
       type: 'text',
     },
   ],

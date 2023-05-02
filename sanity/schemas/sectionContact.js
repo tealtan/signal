@@ -16,6 +16,7 @@ export default {
     {
       name: 'socialButtons',
       title: 'Social Buttons',
+      description: 'Uses HTML. Contact Allen for edits.',
       type: 'text',
     },
     {
@@ -31,6 +32,7 @@ export default {
     {
       name: 'emailForm',
       title: 'Email Form',
+      description: 'Uses HTML. Contact Allen for edits.',
       type: 'text',
     },
   ],

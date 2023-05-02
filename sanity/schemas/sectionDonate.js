@@ -16,6 +16,7 @@ export default {
     {
       name: 'sidebarDonateButton',
       title: 'Sidebar Donate Button',
+      description: 'Uses HTML. Contact Allen for edits.',
       type: 'text',
     },
     {

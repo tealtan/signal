@@ -20,6 +20,7 @@ export default {
     },
     {
       name: 'sidebar',
+      description: 'Uses HTML. Contact Allen for edits.',
       title: 'Sidebar',
       type: 'text',
     },
