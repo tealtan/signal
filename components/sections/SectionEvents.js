@@ -1,6 +1,6 @@
 import React from 'react'
 
-import client from "../../sanityClient";
+import client from '../../sanityClient'
 
 import Container from '../Container'
 import Section from './Section'
@@ -8,12 +8,13 @@ import SectionHeader from '../SectionHeader'
 import Event from '../Event'
 
 // For the year nav
-const currentYear = (new Date()).getFullYear();
-const startYear = 2008;
-const getYearRange = (start, stop, step) => Array.from({ length: (stop - start) / step + 1}, (_, i) => start + (i * step));
+const currentYear = new Date().getFullYear()
+const startYear = 2008
+const getYearRange = (start, stop, step) =>
+  Array.from({ length: (stop - start) / step + 1 }, (_, i) => start + i * step)
 
-let yearRange = getYearRange(currentYear, startYear, -1);
-yearRange = yearRange.filter(year => year != 2020); // Skip 2020
+let yearRange = getYearRange(currentYear, startYear, -1)
+yearRange = yearRange.filter((year) => year != 2020) // Skip 2020
 
 class SectionEvents extends React.Component {
   state = { events: [] }
@@ -35,8 +36,10 @@ class SectionEvents extends React.Component {
           && date < "${year}-12-31'"]
           | order(date)`
       )
-      .then((data) => { this.setEvents(data); })
-      .catch(console.error);
+      .then((data) => {
+        this.setEvents(data)
+      })
+      .catch(console.error)
   }
 
   render() {
@@ -44,18 +47,25 @@ class SectionEvents extends React.Component {
       <>
         <Container>
           <Section hasBorder>
-            <SectionHeader text={this.props.title} color="#FF0058" id="events" />
+            <SectionHeader
+              text={this.props.title}
+              color="#FF0058"
+              id="events"
+            />
             <div className="pastEvents">
               <h3>Past events</h3>
               <nav>
-                { yearRange.map((year, i) =>
+                {yearRange.map((year, i) => (
                   <a
                     className="pastEventsYear"
                     data-year={year}
                     href={`#year-${year}`}
                     onClick={() => this.fetchEventsFromYear(year)}
-                    key={i}>{year}</a>
-                )}
+                    key={i}
+                  >
+                    {year}
+                  </a>
+                ))}
               </nav>
             </div>
             <div>
@@ -88,7 +98,7 @@ class SectionEvents extends React.Component {
             font-size: 1.125rem;
             font-weight: 700;
             margin-right: 0.625rem;
-            color: #FF0058;
+            color: #ff0058;
           }
         `}</style>
       </>

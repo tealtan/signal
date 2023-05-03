@@ -75,7 +75,7 @@ class Recording extends React.Component {
             line-height: 28px;
             font-weight: 700;
             text-align: center;
-            color: #5AE798;
+            color: #5ae798;
           }
 
           .albumLinks a:hover {

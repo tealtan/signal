@@ -57,12 +57,8 @@ class Event extends React.Component {
               {this.props.dateString || formatDate(this.props.date)}
             </span>
             <div className="eventHeadline">
-              <div className="eventName">
-                {this.props.title}
-              </div>
-              <div className="eventLocation">
-                {this.props.location}
-              </div>
+              <div className="eventName">{this.props.title}</div>
+              <div className="eventLocation">{this.props.location}</div>
             </div>
             <div
               className={`drawerToggle ${

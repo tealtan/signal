@@ -17,47 +17,44 @@ class SectionPeople extends React.Component {
       <>
         <Container>
           <Section>
-            <SectionHeader text={this.props.title} id="people" color="#27D5FF" />
+            <SectionHeader
+              text={this.props.title}
+              id="people"
+              color="#27D5FF"
+            />
             <div className="flex">
               <div className="sidebar">
-                <BlockContent
-                  blocks={this.props.sectionA}
-                />
+                <BlockContent blocks={this.props.sectionA} />
               </div>
               <PersonGroup
                 leftCol={this.props.sectionAofPeopleLeftCol}
                 rightCol={this.props.sectionAofPeopleRightCol}
-                spacing='28px'
+                spacing="28px"
               />
             </div>
             <div className="flex">
               <div className="sidebar">
-                <BlockContent
-                  blocks={this.props.sectionB}
-                />
+                <BlockContent blocks={this.props.sectionB} />
               </div>
               <PersonGroup
                 leftCol={this.props.sectionBofPeopleLeftCol}
                 rightCol={this.props.sectionBofPeopleRightCol}
-                spacing='0'
+                spacing="0"
               />
             </div>
             <div className="flex">
               <div className="sidebar">
-                <BlockContent
-                  blocks={this.props.sectionC}
-                />
+                <BlockContent blocks={this.props.sectionC} />
               </div>
               <PersonGroup
                 leftCol={this.props.sectionCofPeopleLeftCol}
                 rightCol={this.props.sectionCofPeopleRightCol}
-                spacing='28px'
+                spacing="28px"
               />
             </div>
           </Section>
         </Container>
-        <style jsx>{`
-        `}</style>
+        <style jsx>{``}</style>
       </>
     )
   }

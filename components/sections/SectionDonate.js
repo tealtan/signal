@@ -22,14 +22,18 @@ class SectionDonate extends React.Component {
               color="#7D83E6"
             />
             <div className="flex">
-              <div className="donateContent" style={{maxWidth: '750px'}}>
+              <div className="donateContent" style={{ maxWidth: '750px' }}>
                 <BlockContent
                   blocks={this.props.body}
                   imageOptions={{ w: 750, fit: 'max' }}
                 />
               </div>
               <div className="sidebar supportSidebar">
-                <div dangerouslySetInnerHTML={{ __html: this.props.sidebarDonateButton }}></div>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: this.props.sidebarDonateButton,
+                  }}
+                ></div>
                 <BlockContent
                   blocks={this.props.sidebarText}
                   imageOptions={{ w: 750, fit: 'max' }}

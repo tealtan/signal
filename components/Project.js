@@ -27,9 +27,7 @@ class Project extends React.Component {
           }`}
         >
           <div className="projectHead" onClick={this.toggleDrawer.bind(this)}>
-            <span className="eventDate">
-              {this.props.title}
-            </span>
+            <span className="eventDate">{this.props.title}</span>
             <div
               className={`drawerToggle ${
                 this.state.drawerHidden ? 'drawerClosed' : ''
@@ -39,19 +37,19 @@ class Project extends React.Component {
           {!this.state.drawerHidden && (
             <div className="projectDetails drawerContents">
               <div className="flex">
-                <div style={{maxWidth: '750px'}}>
-                <BlockContent
-                  blocks={this.props.body}
-                  imageOptions={{ w: 750, fit: 'max' }}
-                  projectId={"q4ur6w8h"}
-                  dataset={"production"}
-                />
+                <div style={{ maxWidth: '750px' }}>
+                  <BlockContent
+                    blocks={this.props.body}
+                    imageOptions={{ w: 750, fit: 'max' }}
+                    projectId={'q4ur6w8h'}
+                    dataset={'production'}
+                  />
                 </div>
                 <div className="sidebar">
                   <BlockContent
                     blocks={this.props.sidebar}
-                    projectId={"q4ur6w8h"}
-                    dataset={"production"}
+                    projectId={'q4ur6w8h'}
+                    dataset={'production'}
                   />
                 </div>
               </div>
@@ -127,8 +125,7 @@ class Project extends React.Component {
           }
         `}</style>
         <style global jsx>
-          {`
-          `}
+          {``}
         </style>
       </>
     )

@@ -18,17 +18,23 @@ class SectionProjects extends React.Component {
       <>
         <Container>
           <Section hasBorder>
-            <SectionHeader text={this.props.title} id="projects" color="#E9D114" />
-            <div style={{maxWidth: '750px'}}>
-                <BlockContent
-                    blocks={this.props.body}
-                    imageOptions={{ w: 750, fit: 'max' }}
-                />
-                <p>
-                    <a href="#events">
-                        <strong>View complete past & current Signal projects here.</strong>
-                    </a>
-                </p>
+            <SectionHeader
+              text={this.props.title}
+              id="projects"
+              color="#E9D114"
+            />
+            <div style={{ maxWidth: '750px' }}>
+              <BlockContent
+                blocks={this.props.body}
+                imageOptions={{ w: 750, fit: 'max' }}
+              />
+              <p>
+                <a href="#events">
+                  <strong>
+                    View complete past & current Signal projects here.
+                  </strong>
+                </a>
+              </p>
             </div>
             {this.props.projects.map((project) => (
               <Project key={project._id} {...project}></Project>

@@ -10,11 +10,9 @@ class Person extends React.Component {
       <>
         <div className="people">
           {this.props.bioLink ? (
-              <p className={this.props.isInstrument ? 'instrument' : ''}>
-                <a href={this.props.bioLink}>
-                  {this.props.title}
-                </a>
-              </p>
+            <p className={this.props.isInstrument ? 'instrument' : ''}>
+              <a href={this.props.bioLink}>{this.props.title}</a>
+            </p>
           ) : (
             <p className={this.props.isInstrument ? 'instrument' : ''}>
               {this.props.title}
@@ -31,7 +29,7 @@ class Person extends React.Component {
           a:after {
             content: '×';
             font-size: 28px;
-            color: #27D5FF;
+            color: #27d5ff;
             display: inline-block;
             margin: 0 0 -5px 10px;
             -ms-transform: rotate(45deg);

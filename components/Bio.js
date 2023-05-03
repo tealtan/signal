@@ -19,16 +19,18 @@ class Bio extends React.Component {
           <div className="bioLayout">
             <div className="bioImage">
               <img
-                src={ this.props.portraitPhotoImage.url + '?w=500&auto=format&q=75' }
-                alt={ "Picture of " + this.props.title }
+                src={
+                  this.props.portraitPhotoImage.url + '?w=500&auto=format&q=75'
+                }
+                alt={'Picture of ' + this.props.title}
               />
               <figcaption>{this.props.photoCredit}</figcaption>
             </div>
             <div>
-                <BlockContent
-                    blocks={this.props.body}
-                    imageOptions={{ w: 750, fit: 'max' }}
-                />
+              <BlockContent
+                blocks={this.props.body}
+                imageOptions={{ w: 750, fit: 'max' }}
+              />
             </div>
           </div>
         </div>
@@ -66,8 +68,13 @@ class Bio extends React.Component {
           }
 
           .closeButton {
-            display: inline-block; width: 2.5rem; height: 2.5rem; text-align: center; line-height: 1.25;
-            background: rgba(255,255,255,0.8); border-radius: 50%;
+            display: inline-block;
+            width: 2.5rem;
+            height: 2.5rem;
+            text-align: center;
+            line-height: 1.25;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
 
             font-size: 2rem;
             font-weight: 700;
@@ -78,7 +85,7 @@ class Bio extends React.Component {
           }
 
           .closeButton:hover {
-            background: rgba(240,240,240,0.8);
+            background: rgba(240, 240, 240, 0.8);
           }
 
           @media screen and (min-width: 720px) {
@@ -93,7 +100,8 @@ class Bio extends React.Component {
           @media screen and (min-width: 720px) {
             .bioImage {
               align-self: flex-start; // needed to make height auto inside a flex container, to let sticky work
-              position: sticky; top: 60px;
+              position: sticky;
+              top: 60px;
             }
           }
         `}</style>

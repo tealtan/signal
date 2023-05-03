@@ -29,7 +29,7 @@ export async function getStaticProps({ params }) {
     'sectionVideo',
     'sectionDonate',
     'sectionContact',
-  ]);
+  ])
 
   const eventsData = await client.fetch(
     '*[_type == "event" && date > "' +
@@ -39,7 +39,7 @@ export async function getStaticProps({ params }) {
 
   const sectionTopData = await client.fetch(
     '*[_type == "sectionTop"]{ ..., "backgroundImage": { "url": backgroundImage.asset->url } }'
-  );
+  )
 
   const sectionRecordingsData = await client.fetch(
     '*[_type == "sectionRecordings"]{ ..., "recordings": recordings[]{ ..., "cover": cover.asset->url } }'
@@ -272,8 +272,7 @@ export default function Index(response) {
         }
 
         blockquote,
-        .bigText
-        .quoteText p {
+        .bigText .quoteText p {
           display: inline;
           font-size: 22px;
           line-height: 28px;
@@ -285,8 +284,7 @@ export default function Index(response) {
 
         @media screen and (min-width: 720px) {
           blockquote,
-          .bigText
-          .quoteText p {
+          .bigText .quoteText p {
             font-size: 28px;
             line-height: 40px;
           }

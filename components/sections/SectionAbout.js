@@ -34,19 +34,16 @@ class SectionAbout extends React.Component {
                   this.state.drawerHidden ? 'drawerClosed' : ''
                 }`}
               >
-                <div style={{maxWidth: '750px'}}>
+                <div style={{ maxWidth: '750px' }}>
                   <BlockContent
                     blocks={this.props.body}
                     imageOptions={{ w: 750, fit: 'max' }}
                   />
                 </div>
-                <a
-                  className="aboutMore"
-                  onClick={this.toggleDrawer.bind(this)}
-                >Read Full Bio</a>
-                <div
-                  className="drawerContents"
-                >
+                <a className="aboutMore" onClick={this.toggleDrawer.bind(this)}>
+                  Read Full Bio
+                </a>
+                <div className="drawerContents">
                   <BlockContent
                     blocks={this.props.bodyFullBio}
                     imageOptions={{ w: 750, fit: 'max' }}

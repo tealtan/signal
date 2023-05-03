@@ -13,7 +13,7 @@ class PersonGroup extends React.Component {
         <div className="row">
           <div className="column" style={{ gap: this.props.spacing }}>
             {this.props.leftCol.map((person) => (
-              <Person key={person._id} {...person}/>
+              <Person key={person._id} {...person} />
             ))}
           </div>
           <div className="column" style={{ gap: this.props.spacing }}>
