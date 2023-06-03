@@ -79,7 +79,7 @@ class SectionEvents extends React.Component {
           .pastEvents {
             margin: 0 0 30px 0;
           }
-          @media screen and (min-width: 720px) {
+          @media screen and (min-width: 1024px) {
             .pastEvents {
               margin: -105px 0 125px 0;
             }
