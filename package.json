@@ -1,6 +1,6 @@
 {
   "engines": {
-    "node": "16.11.1"
+    "node": "20.6.1"
   },
   "dependencies": {
     "@sanity/block-content-to-react": "^3.0.0",
