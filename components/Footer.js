@@ -14,7 +14,7 @@ class Footer extends React.Component {
         <Container>
           <Section padding="small" hasBorder>
             <footer>
-              <span>{new Date().getFullYear()}, Ensemble Signal</span>
+              <span>© {new Date().getFullYear()}, Ensemble Signal</span>
             </footer>
           </Section>
         </Container>
