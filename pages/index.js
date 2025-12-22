@@ -31,10 +31,19 @@ export async function getStaticProps({ params }) {
     'sectionContact',
   ])
 
+  const mostRecentEvent = await client.fetch(
+    '*[_type == "event"] | order(date desc)[0]'
+  )
+
+  const mostRecentYear = mostRecentEvent?.date
+    ? new Date(mostRecentEvent.date).getFullYear()
+    : new Date().getFullYear()
+
+  const startDate = `${mostRecentYear - 1}-01-01`
+
+  /* We want to see 2 years of events, starting from the most recent event */
   const eventsData = await client.fetch(
-    '*[_type == "event" && date > "' +
-      sectionsData[2].startDate +
-      '"] | order(date)'
+    `*[_type == "event" && date >= "${startDate}"] | order(date)`
   )
 
   const sectionTopData = await client.fetch(
